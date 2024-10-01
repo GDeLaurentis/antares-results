@@ -30,7 +30,7 @@ jobs:
         pip install -e .
 
     - name: Install LaTeX
-      run: sudo apt-get install -y texlive-full
+      run: sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
   
     - name: Compile LaTeX files
       run: |
