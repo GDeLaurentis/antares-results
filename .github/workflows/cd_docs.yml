@@ -30,7 +30,7 @@ jobs:
         pip install -e .
 
     - name: Install LaTeX
-      run: sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
+      run: sudo apt-get install -y texlive-luatex texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
   
     - name: Compile LaTeX files
       run: |
@@ -42,7 +42,7 @@ jobs:
           # Create corresponding directory in _static to store the PDFs
           mkdir -p sphinx/_static/$DIR
           # Compile the .tex file and move the PDF to _static
-          pdflatex -interaction=nonstopmode -output-directory=sphinx/_static/$DIR $texfile
+          lualatex -interaction=nonstopmode -output-directory=sphinx/_static/$DIR $texfile
         done
 
     - name: Build docs
