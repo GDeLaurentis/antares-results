@@ -42,7 +42,7 @@ jobs:
           # Create corresponding directory in _static to store the PDFs
           mkdir -p sphinx/_static/$DIR
           # Compile the .tex file and move the PDF to _static
-          latexmk -pdf -silent -output-directory=sphinx/_static/$DIR $texfile
+          pdflatex -interaction=nonstopmode -output-directory=sphinx/_static/$DIR $texfile
         done
 
     - name: Build docs
