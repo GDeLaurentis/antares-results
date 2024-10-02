@@ -25,6 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        sudo apt-get install -y ghostscript imagemagick
         python -m pip install --upgrade pip
         pip install sphinx sphinx-rtd-theme
         pip install -e .

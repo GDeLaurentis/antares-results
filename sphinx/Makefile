@@ -17,7 +17,7 @@ amplitudes:
 	  rm sphinx/source/_static/$$DIR/*.log sphinx/source/_static/$$DIR/*.aux sphinx/source/_static/$$DIR/*.toc sphinx/source/_static/$$DIR/*.out; \
 	  pdf_file="$$DIR/$$(basename $${texfile%.tex}.pdf)"; \
 	  image_file="$$DIR/$$(basename $${texfile%.tex}.png)"; \
-	  convert -density 600 "sphinx/source/_static/$$pdf_file" -quality 100 "sphinx/source/_static/$$image_file"; \
+	  gs -sDEVICE=pngalpha -o "sphinx/source/_static/$$image_file" -r600 "sphinx/source/_static/$$pdf_file"; \
 	  rst_file="$$DIR/coeffs/$$(basename $${texfile%.tex}.rst)"; \
 	  title="$$(basename $${texfile%.tex})"; \
 	  echo "$$title" >> "sphinx/source/$$rst_file"; \
@@ -36,6 +36,7 @@ amplitudes:
 	    echo "" >> "$$rst_file"; \
 	    echo ".. toctree::" >> "$$rst_file"; \
 	    echo "   :glob:" >> "$$rst_file"; \
+	    echo "   :maxdepth: 1" >> "$$rst_file"; \
 	    echo "" >> "$$rst_file"; \
 	    echo "   */*" >> "$$rst_file"; \
 	    echo "" >> "$$rst_file"; \
@@ -57,3 +58,6 @@ github:
 	@make html
 	@cp -a $(BUILDDIR)/html/. ../docs
 	@rm -r $(BUILDDIR)
+
+clean:
+	@rm -rf source/_static source/amplitudes ../docs
