@@ -34,15 +34,15 @@ jobs:
   
     - name: Compile LaTeX files
       run: |
-        mkdir -p sphinx/_static/amplitudes/
+        mkdir -p docs/_static/amplitudes/
         # Recursively find and compile all .tex files
         for texfile in $(find amplitudes/ -name "*.tex"); do
           # Get the directory of the tex file
           DIR=$(dirname $texfile)
           # Create corresponding directory in _static to store the PDFs
-          mkdir -p sphinx/_static/$DIR
+          mkdir -p docs/_static/$DIR
           # Compile the .tex file and move the PDF to _static
-          lualatex -interaction=nonstopmode -output-directory=sphinx/_static/$DIR $texfile
+          lualatex -interaction=nonstopmode -output-directory=docs/_static/$DIR $texfile
         done
 
     - name: Build docs
