@@ -31,23 +31,11 @@ jobs:
 
     - name: Install LaTeX
       run: sudo apt-get install -y texlive-luatex texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
-  
-    - name: Compile LaTeX files
-      run: |
-        mkdir -p docs/_static/amplitudes/
-        # Recursively find and compile all .tex files
-        for texfile in $(find amplitudes/ -name "*.tex"); do
-          # Get the directory of the tex file
-          DIR=$(dirname $texfile)
-          # Create corresponding directory in _static to store the PDFs
-          mkdir -p docs/_static/$DIR
-          # Compile the .tex file and move the PDF to _static
-          lualatex -interaction=nonstopmode -output-directory=docs/_static/$DIR $texfile
-        done
 
     - name: Build docs
       run: |
         cd sphinx
+        make amplitudes
         make github
 
     - name: setup git config

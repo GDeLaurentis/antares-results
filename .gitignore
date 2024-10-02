@@ -1,0 +1,5 @@
+docs/
+sphinx/source/_static/
+sphinx/source/amplitudes/
+__pycache__/
+*~

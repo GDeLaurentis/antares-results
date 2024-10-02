@@ -1,26 +1,19 @@
 Spinor Helicity Amplitudes
 ===================================
 
+A repository for spinor-helicity amplitudes reconstructed from numerical evaluations
+
 .. toctree::
+   :glob:
    :maxdepth: 2
-   :caption: Contents:
+   :caption: List of Amplitudes:
 
-
-Quick start
------------
-
-A repository for helicity amplitudes
-
-PDF Documentation
-=================
-
-- `Vjj process <_static/amplitudes/Vjj/qQQqll/coeff_0.pdf>`_
+   amplitudes/*/*
 
 
 Indices and tables
 ------------------
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
