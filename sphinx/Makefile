@@ -31,8 +31,13 @@ amplitudes:
 	  if [ "$$(basename $$dir)" != "coeffs" ] && [ "$$(basename $$dir)" != "amplitudes" ]; then \
 	    base_dir="$$(basename $$dir)"; \
 	    rst_file="sphinx/source/$$dir/$$base_dir.rst"; \
-	    echo "$$base_dir" > "$$rst_file"; \
-	    echo "======================" >> "$$rst_file"; \
+		if [ -f "$$dir/README.md" ]; then \
+		echo "Converting README.md to RST"; \
+		pandoc "$$dir/README.md" -t rst >> "$$rst_file"; \
+		else \
+		echo "$$base_dir" > "$$rst_file"; \
+		echo "======================" >> "$$rst_file"; \
+		fi; \
 	    echo "" >> "$$rst_file"; \
 	    echo ".. toctree::" >> "$$rst_file"; \
 	    echo "   :glob:" >> "$$rst_file"; \

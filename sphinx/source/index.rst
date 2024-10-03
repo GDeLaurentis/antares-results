@@ -10,10 +10,8 @@ A repository for spinor-helicity amplitudes reconstructed from numerical evaluat
 
    amplitudes/*/*
 
-
 Indices and tables
 ------------------
 
 * :ref:`genindex`
 * :ref:`search`
-

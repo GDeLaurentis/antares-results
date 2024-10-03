@@ -47,6 +47,14 @@ extensions = [
     'recommonmark',
 ]
 
+# Optionally, configure MathJax if needed
+mathjax3_config = {
+    'tex': {
+        'inlineMath': [['$', '$'], ['\\(', '\\)']],
+        'displayMath': [['$$', '$$'], ['\\[', '\\]']],
+    },
+}
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
