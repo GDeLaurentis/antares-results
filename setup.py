@@ -14,7 +14,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Giuseppe De Laurentis',
     author_email='g.dl@hotmail.it',
-    url='https://github.com/GDeLaurentis/lips',
+    url='https://github.com/GDeLaurentis/spinor-helicity-amplitudes',
     download_url=f'https://github.com/GDeLaurentis/spinor-helicity-amplitudes/archive/v{version}.tar.gz',
     project_urls={
         'Documentation': 'https://gdelaurentis.github.io/spinor-helicity-amplitudes/',

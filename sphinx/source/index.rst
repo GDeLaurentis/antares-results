@@ -1,4 +1,4 @@
-Spinor Helicity Amplitudes
+pinor Helicity Amplitudes
 ===================================
 
 A repository for spinor-helicity amplitudes reconstructed from numerical evaluations
@@ -14,4 +14,5 @@ Indices and tables
 ------------------
 
 * :ref:`genindex`
+* :ref:`modindex`
 * :ref:`search`

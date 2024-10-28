@@ -3,3 +3,4 @@ sphinx/source/_static/
 sphinx/source/amplitudes/
 __pycache__/
 *~
+*.egg-info/

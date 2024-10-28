@@ -13,11 +13,10 @@ amplitudes:
 	  DIR=$$(dirname $$texfile); \
 	  mkdir -p sphinx/source/_static/$$DIR; \
 	  mkdir -p sphinx/source/$$DIR/coeffs; \
-	  lualatex -interaction=nonstopmode -output-directory=sphinx/source/_static/$$DIR $$texfile; \
-	  rm sphinx/source/_static/$$DIR/*.log sphinx/source/_static/$$DIR/*.aux sphinx/source/_static/$$DIR/*.toc sphinx/source/_static/$$DIR/*.out; \
+	  SpinorLatexCompiler $$texfile -i nonstopmode -o sphinx/source/_static/$$DIR; \
 	  pdf_file="$$DIR/$$(basename $${texfile%.tex}.pdf)"; \
 	  image_file="$$DIR/$$(basename $${texfile%.tex}.png)"; \
-	  gs -sDEVICE=pngalpha -o "sphinx/source/_static/$$image_file" -r600 "sphinx/source/_static/$$pdf_file"; \
+	  gs -sDEVICE=pngalpha -o "sphinx/source/_static/$$image_file" -r600 "sphinx/source/_static/$$pdf_file" > /dev/null 2>&1; \
 	  rst_file="$$DIR/coeffs/$$(basename $${texfile%.tex}.rst)"; \
 	  title="$$(basename $${texfile%.tex})"; \
 	  echo "$$title" >> "sphinx/source/$$rst_file"; \
@@ -25,7 +24,6 @@ amplitudes:
 	  echo "" >> "sphinx/source/$$rst_file"; \
 	  echo ".. image:: /_static/$$image_file" >> "sphinx/source/$$rst_file"; \
 	  echo "   :width: 100%" >> "sphinx/source/$$rst_file"; \
-	  echo "   :height: 200px" >> "sphinx/source/$$rst_file"; \
 	done; \
 	for dir in $$(find amplitudes/ -type d); do \
 	  if [ "$$(basename $$dir)" != "coeffs" ] && [ "$$(basename $$dir)" != "amplitudes" ]; then \

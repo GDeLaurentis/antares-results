@@ -14,6 +14,8 @@
 #
 import os
 import sys
+import re
+from sphinx.util import logging
 
 sys.path.insert(0, os.path.abspath('../../'))
 
@@ -209,3 +211,25 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+
+logger = logging.getLogger(__name__)
+
+def sort_toc(app, doctree, fromdocname):
+    for node in doctree.traverse():
+        if node.tagname == 'toctree':
+            # Get the current list of entries in the toctree
+            entries = node['entries']
+
+            # Use a regular expression to capture the numeric part of file names
+            def extract_number(entry):
+                match = re.search(r'coeff_(\d+)', entry[1])
+                return int(match.group(1)) if match else float('inf')
+
+            # Sort the entries numerically based on the numbers in file names
+            entries.sort(key=lambda entry: extract_number(entry))
+
+            # Debugging output to check the sorting
+            logger.info(f"Sorted toctree entries: {[entry[1] for entry in entries]}")
+
+def setup(app):
+    app.connect('doctree-resolved', sort_toc)
