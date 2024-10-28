@@ -6,13 +6,12 @@ from pathlib import Path
 
 from pentagon_functions import evaluate_pentagon_functions, PentagonMonomial
 
-from antares.terms.terms import LoadResults
 from antares.terms.vs_basis import load_basis, evaluate_basis
 
 from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
 
-from momenta import oPs
-from target_values import target_values
+from .momenta import oPs
+from .target_values import target_values
 
 
 this_script_path = Path(__file__).resolve().parent
@@ -26,6 +25,7 @@ partial_amplitudes = [
     for loop in loops
     for nf in range(loop + 1)
 ]
+
 
 @pytest.mark.parametrize(
     "amppart, loop, nf", partial_amplitudes
@@ -57,16 +57,16 @@ def test_Vjj_helicity_remainder(amppart, loop, nf):
     numerical_tree = (numerical_rational_basis @ rational_matrix_tree)[0]
 
     if loop == 0:
-    
+
         numerical_finite_remainder = numerical_tree
 
     else:
 
         pentagon_functions = [PentagonMonomial(entry) for entry in content]
-        pentagon_monomials = list(set([pentagon for pentagon_monomial in pentagon_functions 
+        pentagon_monomials = list(set([pentagon for pentagon_monomial in pentagon_functions
                                        for pentagon in pentagon_monomial.distinct_elements()]))
 
-        evaluated_pentagon_monomials = evaluate_pentagon_functions(pentagon_monomials, oPs.image(("654321", False)), 
+        evaluated_pentagon_monomials = evaluate_pentagon_functions(pentagon_monomials, oPs.image(("654321", False)),
                                                                    pentagon_function_set='m1', precision="d", number_of_cores=4)
 
         rational_matrix = matrix_from_plain_txt_coo(this_script_path / merged_vs / f"{amppart}_{loop}L_Nf{nf}")

@@ -214,6 +214,7 @@ epub_exclude_files = ['search.html']
 
 logger = logging.getLogger(__name__)
 
+
 def sort_toc(app, doctree, fromdocname):
     for node in doctree.traverse():
         if node.tagname == 'toctree':
@@ -230,6 +231,7 @@ def sort_toc(app, doctree, fromdocname):
 
             # Debugging output to check the sorting
             logger.info(f"Sorted toctree entries: {[entry[1] for entry in entries]}")
+
 
 def setup(app):
     app.connect('doctree-resolved', sort_toc)

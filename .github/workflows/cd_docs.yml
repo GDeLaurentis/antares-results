@@ -18,6 +18,13 @@ jobs:
       with:
         python-version: 3.9
 
+    - name: Checkout another Repo (antares)
+      uses: actions/checkout@v4
+      with:
+        repository: GDeLaurentis/antares-dev
+        token: ${{ secrets.GitHubActions_PAT }}
+        path: antares
+
     - name: Checkout this Repo
       uses: actions/checkout@v4
       with:
@@ -29,6 +36,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install sphinx sphinx-rtd-theme
         pip install -e .
+        pip install -e antares
 
     - name: Install LaTeX
       run: sudo apt-get install -y texlive-luatex texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
