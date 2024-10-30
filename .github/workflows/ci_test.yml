@@ -64,7 +64,7 @@ jobs:
     - name: Install dependencies and build Pentagon Functions
       working-directory: pentagon-functions
       run: |
-        pip install . --global-option=build_ext
+        pip install . --global-option=build_ext --verbose
 
     - name: Test with pytest
       run: |
