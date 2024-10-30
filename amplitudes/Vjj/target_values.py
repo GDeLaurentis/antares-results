@@ -1,4 +1,14 @@
-# as given in arXiv:2110.07541 Table 5
+"""
+Target values for the one- and two-loop remainders of the Vjj amplitudes as given in arXiv:2110.07541 Table 5,
+at associated phase space point given in :code:momenta.py. The format is that of a dictionary: (partial, loops, nf-powers).
+Import with
+
+.. code-block:: python
+
+    from amplitudes.Vjj.target_values import target_values
+
+"""
+
 target_values = {
 
     # (partial, loops, nf-powers): target value - loop is normalized by the tree.

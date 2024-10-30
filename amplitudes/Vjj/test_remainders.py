@@ -31,6 +31,7 @@ partial_amplitudes = [
     "amppart, loop, nf", partial_amplitudes
 )
 def test_Vjj_helicity_remainder(amppart, loop, nf):
+    """Test the numerical evaluation of the Vjj remainders against cached values, run with pytest."""
 
     if amppart in ["quarkspm", "quarksmp"]:
         merged_vs = "qQQqll/nmhv/"

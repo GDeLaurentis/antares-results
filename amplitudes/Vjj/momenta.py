@@ -1,6 +1,11 @@
 """
 Phase space point of arXiv:2110.07541 written in terms of four momenta (parsed from Mathematica).
-Mandelstams are given in arXiv:2110.07541, eq. C.1.
+Mandelstams are given in arXiv:2110.07541, eq. C.1. Import with:
+
+.. code-block:: python
+
+    from amplitudes.Vjj.momenta import oPs
+
 """
 
 
