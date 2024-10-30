@@ -59,6 +59,7 @@ jobs:
         pip install pytest pytest-cov
         pip install -e spinor-helicity-amplitudes
         pip install -e antares
+        pip install -e linac
         pip install -e pentagon-functions
 
     - name: Test with pytest
