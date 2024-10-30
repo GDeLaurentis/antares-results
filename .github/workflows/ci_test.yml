@@ -41,7 +41,7 @@ jobs:
     - name: Checkout another Repo (linac)
       uses: actions/checkout@v4
       with:
-        repository: GDeLaurentis/antares-dev
+        repository: GDeLaurentis/linac-dev
         token: ${{ secrets.GitHubActions_PAT }}
         path: linac
 
