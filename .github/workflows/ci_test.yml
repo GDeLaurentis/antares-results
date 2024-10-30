@@ -60,7 +60,11 @@ jobs:
         pip install -e spinor-helicity-amplitudes
         pip install -e antares
         pip install -e linac
-        pip install -e pentagon-functions
+
+    - name: Install dependencies and build Pentagon Functions
+      working-directory: pentagon-functions
+      run: |
+        pip install . --global-option=build_ext
 
     - name: Test with pytest
       run: |
