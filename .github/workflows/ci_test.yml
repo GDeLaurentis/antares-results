@@ -46,7 +46,7 @@ jobs:
         path: linac
 
     - name: Checkout another Repo (Pentagon Functions)
-      run: git clone https://gitlab.com/GDeLaurentis/pentagon-functions-python-interface.git pentagon-functions
+      run: git clone https://gitlab.com/GDeLaurentis/pentagon-functions-python-interface.git PentagonFunctions-cpp
 
     - name: Checkout this Repo
       uses: actions/checkout@v4
@@ -62,10 +62,10 @@ jobs:
         pip install -e linac
 
     - name: Install dependencies and build Pentagon Functions
-      working-directory: pentagon-functions
+      working-directory: PentagonFunctions-cpp
       run: |
-        pip install -e . --verbose
-        pip install -e . --verbose
+        pip install -e .
+        python setup.py build_ext --verbose
 
     - name: Test with pytest
       run: |
