@@ -6,7 +6,7 @@ from pathlib import Path
 
 from pentagon_functions import evaluate_pentagon_functions, PentagonMonomial
 
-from antares.terms.vs_basis import load_basis, evaluate_basis
+from antares.terms.lterms import TermsList
 
 from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
 
@@ -40,15 +40,15 @@ def test_Vjj_helicity_remainder(amppart, loop, nf):
     elif amppart in ["gluonspm", "gluonsmp"]:
         merged_vs = "qggqll/nmhv/"
 
-    rational_basis = load_basis(this_script_path / merged_vs, 6, verbose=True)
+    rational_basis = TermsList(this_script_path / merged_vs, 6, verbose=True)
     rational_matrix_tree = matrix_from_plain_txt_coo(this_script_path / merged_vs / f"{amppart}_tree")
 
     mpmath.mp.dps = 16
 
     if "pp" in amppart or "pm" in amppart:
-        numerical_rational_basis = numpy.array(evaluate_basis(rational_basis, oPs))
+        numerical_rational_basis = numpy.array(rational_basis(oPs))
     elif "mp" in amppart:
-        numerical_rational_basis = numpy.array(evaluate_basis(rational_basis, oPs.image(("132456", False))))
+        numerical_rational_basis = numpy.array(rational_basis(oPs.image(("132456", False))))
     else:
         raise Exception(f"amppart {amppart} not undersood")
 
