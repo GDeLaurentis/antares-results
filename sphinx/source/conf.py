@@ -23,7 +23,7 @@ from version import __version__ as version  # noqa: E402
 
 # -- Project information -----------------------------------------------------
 
-project = 'spinor-helicity-amplitudes'
+project = 'antares-results'
 copyright = '2024, Giuseppe De Laurentis'
 author = 'Giuseppe De Laurentis'
 

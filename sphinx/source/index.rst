@@ -1,4 +1,4 @@
-Spinor Helicity Amplitudes
+Antares Results
 ===================================
 
 A repository for spinor-helicity amplitudes reconstructed from numerical evaluations

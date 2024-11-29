@@ -23,7 +23,7 @@ jobs:
     - name: Checkout this Repo
       uses: actions/checkout@v4
       with:
-        path: spinor-helicity-amplitudes
+        path: antares-results
 
     - name: Install flake8
       run: |
@@ -32,5 +32,5 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        cd spinor-helicity-amplitudes
+        cd antares-results
         flake8 amplitudes/ --count --max-line-length=190 --statistics --verbose

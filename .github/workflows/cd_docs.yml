@@ -28,14 +28,14 @@ jobs:
     - name: Checkout this Repo
       uses: actions/checkout@v4
       with:
-        path: spinor-helicity-amplitudes
+        path: antares-results
 
     - name: Install dependencies
       run: |
         sudo apt-get install -y ghostscript imagemagick pandoc
         python -m pip install --upgrade pip
         pip install sphinx sphinx-rtd-theme
-        pip install -e spinor-helicity-amplitudes
+        pip install -e antares-results
         pip install -e antares
 
     - name: Install LaTeX

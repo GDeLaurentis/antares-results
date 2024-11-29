@@ -51,13 +51,13 @@ jobs:
     - name: Checkout this Repo
       uses: actions/checkout@v4
       with:
-        path: spinor-helicity-amplitudes
+        path: antares-results
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pytest pytest-cov
-        pip install -e spinor-helicity-amplitudes
+        pip install -e antares-results
         pip install -e antares
         pip install -e linac
 
@@ -69,7 +69,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        cd spinor-helicity-amplitudes
+        cd antares-results
         pytest |& tee coverage.txt
         PYTEST_EXIT_CODE=${PIPESTATUS[0]}
         if [ "$PYTEST_EXIT_CODE" -ne 0 ]; then
@@ -82,7 +82,7 @@ jobs:
     # - name: Run update-badges script
     #   if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.9'
     #   run: |
-    #     cd spinor-helicity-amplitudes
+    #     cd antares-results
     #     python update-badges.py
 
     # - name: Update badges and commit README.md

@@ -6,7 +6,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name='spinor-helicity-amplitudes',
+    name='antares-results',
     version=version,
     license='GNU General Public License v3.0',
     description='Spinor Helicity Amplitudes',
@@ -14,11 +14,11 @@ setup(
     long_description_content_type='text/markdown',
     author='Giuseppe De Laurentis',
     author_email='g.dl@hotmail.it',
-    url='https://github.com/GDeLaurentis/spinor-helicity-amplitudes',
-    download_url=f'https://github.com/GDeLaurentis/spinor-helicity-amplitudes/archive/v{version}.tar.gz',
+    url='https://github.com/GDeLaurentis/antares-results',
+    download_url=f'https://github.com/GDeLaurentis/antares-results/archive/v{version}.tar.gz',
     project_urls={
-        'Documentation': 'https://gdelaurentis.github.io/spinor-helicity-amplitudes/',
-        'Issues': 'https://github.com/GDeLaurentis/spinor-helicity-amplitudes/issues',
+        'Documentation': 'https://gdelaurentis.github.io/antares-results/',
+        'Issues': 'https://github.com/GDeLaurentis/antares-results/issues',
     },
     keywords=['Spinor Helicity', 'Scattering Amplitudes'],
     packages=find_packages(),
