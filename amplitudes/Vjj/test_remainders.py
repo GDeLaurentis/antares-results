@@ -3,6 +3,7 @@ import numpy
 import pytest
 
 from pathlib import Path
+from fractions import Fraction
 
 from pentagon_functions import evaluate_pentagon_functions, PentagonMonomial
 
