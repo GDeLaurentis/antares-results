@@ -1,0 +1,5 @@
+coeff_65
+==================
+
+.. image:: /_static/amplitudes/jjj/uubddbg/mhv/coeff_65.png
+   :width: 100%

@@ -1,0 +1,19 @@
+pp → γγγ
+========
+
+Process computed in collaboration with `S.
+Abreu <https://inspirehep.net/authors/1287226>`__, `H.
+Ita <https://inspirehep.net/authors/1019218>`__, `M.
+Klinkert <https://inspirehep.net/authors/1944967>`__, `B.
+Page <https://inspirehep.net/authors/1272484>`__, `V.
+Sotnikov <https://inspirehep.net/authors/1470871>`__.
+
+Published in
+`SciPostPhys.15.4.157 <https://scipost.org/10.21468/SciPostPhys.15.4.157>`__.
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   */*
+

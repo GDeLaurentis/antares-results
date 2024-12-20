@@ -1,0 +1,5 @@
+coeff_0
+==================
+
+.. image:: /_static/amplitudes/yyy/qqyyy_1L/R1_pmmpp/coeff_0.png
+   :width: 100%

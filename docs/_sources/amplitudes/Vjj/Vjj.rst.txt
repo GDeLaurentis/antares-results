@@ -1,0 +1,16 @@
+pp → Vjj
+========
+
+Process computed in collaboration with `H.
+Ita <https://inspirehep.net/authors/1019218>`__, `B.
+Page <https://inspirehep.net/authors/1272484>`__, `V.
+Sotnikov <https://inspirehep.net/authors/1470871>`__.
+
+To appear.
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   */*
+

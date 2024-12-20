@@ -1,0 +1,5 @@
+coeff_33
+==================
+
+.. image:: /_static/amplitudes/jjj/ggggg/mhv/coeff_33.png
+   :width: 100%

@@ -1,0 +1,5 @@
+coeff_429
+==================
+
+.. image:: /_static/amplitudes/jjj/uubggg/mhv/coeff_429.png
+   :width: 100%

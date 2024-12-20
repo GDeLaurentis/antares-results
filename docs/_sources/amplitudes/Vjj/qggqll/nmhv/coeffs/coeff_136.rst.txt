@@ -1,0 +1,5 @@
+coeff_136
+==================
+
+.. image:: /_static/amplitudes/Vjj/qggqll/nmhv/coeff_136.png
+   :width: 100%

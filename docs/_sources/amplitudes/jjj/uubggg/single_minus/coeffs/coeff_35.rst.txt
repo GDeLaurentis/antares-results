@@ -1,0 +1,5 @@
+coeff_35
+==================
+
+.. image:: /_static/amplitudes/jjj/uubggg/single_minus/coeff_35.png
+   :width: 100%

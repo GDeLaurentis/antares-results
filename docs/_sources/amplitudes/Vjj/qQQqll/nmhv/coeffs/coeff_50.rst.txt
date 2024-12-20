@@ -1,0 +1,5 @@
+coeff_50
+==================
+
+.. image:: /_static/amplitudes/Vjj/qQQqll/nmhv/coeff_50.png
+   :width: 100%

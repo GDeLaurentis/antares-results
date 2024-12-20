@@ -1,0 +1,5 @@
+coeff_29
+==================
+
+.. image:: /_static/amplitudes/jjj/ggggg/single_minus/coeff_29.png
+   :width: 100%

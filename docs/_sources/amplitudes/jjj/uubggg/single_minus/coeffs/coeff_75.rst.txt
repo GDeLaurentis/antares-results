@@ -1,0 +1,5 @@
+coeff_75
+==================
+
+.. image:: /_static/amplitudes/jjj/uubggg/single_minus/coeff_75.png
+   :width: 100%

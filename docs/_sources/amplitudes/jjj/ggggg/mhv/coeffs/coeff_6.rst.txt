@@ -1,0 +1,5 @@
+coeff_6
+==================
+
+.. image:: /_static/amplitudes/jjj/ggggg/mhv/coeff_6.png
+   :width: 100%

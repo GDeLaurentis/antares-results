@@ -1,0 +1,9 @@
+single_minus
+======================
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   */*
+
