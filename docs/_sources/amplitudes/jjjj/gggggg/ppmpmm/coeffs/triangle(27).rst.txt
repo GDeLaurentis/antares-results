@@ -1,0 +1,5 @@
+triangle(27)
+==================
+
+.. image:: /_static/amplitudes/jjjj/gggggg/ppmpmm/triangle(27).png
+   :width: 100%

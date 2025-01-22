@@ -1,0 +1,5 @@
+triangle(11)
+==================
+
+.. image:: /_static/amplitudes/jjjj/gggggg/ppppmm/triangle(11).png
+   :width: 100%

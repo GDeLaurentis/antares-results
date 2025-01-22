@@ -1,0 +1,5 @@
+bubble(7)
+==================
+
+.. image:: /_static/amplitudes/jjjj/gggggg/pppmmm/bubble(7).png
+   :width: 100%

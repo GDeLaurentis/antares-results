@@ -1,0 +1,5 @@
+triangle(22)
+==================
+
+.. image:: /_static/amplitudes/jjjj/gggggg/ppppmm/triangle(22).png
+   :width: 100%
