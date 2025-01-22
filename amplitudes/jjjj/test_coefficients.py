@@ -12,6 +12,7 @@ from .target_values import target_values
 
 this_script_path = Path(__file__).resolve().parent
 
+
 @pytest.mark.parametrize(
     "helicity, coeff_targets", target_values.items()
 )
