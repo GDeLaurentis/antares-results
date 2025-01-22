@@ -5,4 +5,4 @@ amplitudes
    :maxdepth: 4
 
    amplitudes.Vjj
-
+   amplitudes.jjjj

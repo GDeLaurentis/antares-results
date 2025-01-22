@@ -1,0 +1,67 @@
+Format:
+ I: Internal Line Label
+ Number: External Line Label
+each followed by:
+ p: Positive Helicity Label
+ n: Negative Helicity Label
+
+box(1): Im1pIpIm2pImIp3mIpIm4p5m6mIp
+box(2): Im1pImIp2pImIp3mImIp4p5m6mIp
+box(3): Im1pIpIm2pImIp3m4pImIp5m6mIp
+box(4): Im1pImIp2pImIp3m4pImIp5m6mIp
+box(5): Im1pIpIm2pImIp3m4p5mIpIm6mIp
+box(6): Im1pImIp2pImIp3m4p5mImIp6mIp
+box(7): Im1pIpIm2p3mIpIm4p5mIpIm6mIp
+box(8): Im1pImIp2p3mImIp4p5mImIp6mIp
+box(9): Ip1pImIp2p3mImIp4p5mImIp6mIm
+box(12): Im6m1pIpIm2pIpIm3mIpIm4p5mIp
+box(13): Im6m1pIpIm2pImIp3mIpIm4p5mIp
+box(14): Im1p2pImIp3mIpIm4pImIp5m6mIp
+box(15): Im1p2pImIp3mImIp4pImIp5m6mIp
+box(16): Ip6m1pImIp2pImIp3mImIp4p5mIm
+box(22): Im6m1p2pIpIm3mIpIm4pIpIm5mIp
+box(25): Im6m1p2pImIp3mIpIm4pImIp5mIp
+box(28): Ip6m1p2pImIp3mImIp4pImIp5mIm
+triangle(1): Im1pIpIm2pImIp3m4p5m6mIp
+triangle(2): Im1pImIp2pImIp3m4p5m6mIp
+triangle(3): Im1pIpIm2p3mIpIm4p5m6mIp
+triangle(4): Im1pImIp2p3mImIp4p5m6mIp
+triangle(5): Ip1pImIp2p3mImIp4p5m6mIm
+triangle(6): Im1pIpIm2p3m4pImIp5m6mIp
+triangle(7): Im1pImIp2p3m4pImIp5m6mIp
+triangle(8): Im1pIpIm2p3m4p5mIpIm6mIp
+triangle(9): Im1pImIp2p3m4p5mImIp6mIp
+triangle(10): Ip1pImIp2p3m4p5mImIp6mIm
+triangle(11): Im6m1pIpIm2pIpIm3m4p5mIp
+triangle(12): Im6m1pIpIm2pImIp3m4p5mIp
+triangle(13): Im1p2pImIp3mIpIm4p5m6mIp
+triangle(14): Im1p2pImIp3mImIp4p5m6mIp
+triangle(15): Ip6m1pImIp2pImIp3m4p5mIm
+triangle(16): Im6m1pIpIm2p3mIpIm4p5mIp
+triangle(17): Im1p2pImIp3m4pImIp5m6mIp
+triangle(18): Ip6m1pImIp2p3mImIp4p5mIm
+triangle(24): Im6m1p2pIpIm3mIpIm4p5mIp
+triangle(25): Im5m6m1pIpIm2pIpIm3m4pIp
+triangle(27): Im6m1p2pImIp3mIpIm4p5mIp
+triangle(29): Ip5m6m1pIpIm2pImIp3m4pIm
+triangle(30): Ip6m1p2pImIp3mImIp4p5mIm
+triangle(31): Ip5m6m1pImIp2pImIp3m4pIm
+triangle(41): Im6m1p2p3mIpIm4pIpIm5mIp
+triangle(42): Im5m6m1p2pIpIm3mIpIm4pIp
+triangle(44): Im6m1p2p3mIpIm4pImIp5mIp
+triangle(48): Ip5m6m1p2pImIp3mIpIm4pIm
+triangle(49): Ip6m1p2p3mImIp4pImIp5mIm
+triangle(50): Ip5m6m1p2pImIp3mImIp4pIm
+bubble(1): Im6m1pIpIm2p3m4p5mIp
+bubble(2): Im1p2pImIp3m4p5m6mIp
+bubble(3): Ip6m1pImIp2p3m4p5mIm
+bubble(4): Im1p2p3mIpIm4p5m6mIp
+bubble(5): Im6m1p2pIpIm3m4p5mIp
+bubble(7): Im1p2p3mImIp4p5m6mIp
+bubble(8): Im6m1p2pImIp3m4p5mIp
+bubble(10): Ip1p2p3mImIp4p5m6mIm
+bubble(11): Ip6m1p2pImIp3m4p5mIm
+bubble(13): Im6m1p2p3mIpIm4p5mIp
+bubble(14): Im5m6m1p2pIpIm3m4pIp
+bubble(17): Ip6m1p2p3mImIp4p5mIm
+bubble(18): Ip5m6m1p2pImIp3m4pIm

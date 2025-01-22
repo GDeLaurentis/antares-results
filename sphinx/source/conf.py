@@ -223,7 +223,7 @@ def sort_toc(app, doctree, fromdocname):
 
             # Use a regular expression to capture the numeric part of file names
             def extract_number(entry):
-                match = re.search(r'coeff_(\d+)', entry[1])
+                match = re.search(r'(?:_|\()(\d+)', entry[1])
                 return int(match.group(1)) if match else float('inf')
 
             # Sort the entries numerically based on the numbers in file names

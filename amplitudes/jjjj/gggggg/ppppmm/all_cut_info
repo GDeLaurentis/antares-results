@@ -1,0 +1,33 @@
+Format:
+ I: Internal Line Label
+ Number: External Line Label
+each followed by:
+ p: Positive Helicity Label
+ n: Negative Helicity Label
+
+box(1): Im1pIpIm2pImIp3pImIp4p5m6mIp
+box(2): Im1pImIp2pImIp3p4p5mImIp6mIp
+box(3): Im1pIpIm2p3pImIp4pImIp5m6mIp
+box(4): Im1pIpIm2p3p4pImIp5mIpIm6mIp
+box(5): Im6m1pIpIm2pIpIm3p4pImIp5mIp
+triangle(1): Im1pIpIm2pImIp3p4p5m6mIp
+triangle(2): Im1pImIp2pImIp3p4p5m6mIp
+triangle(3): Im1pIpIm2p3pImIp4p5m6mIp
+triangle(4): Im1pIpIm2p3p4pImIp5m6mIp
+triangle(5): Im1pIpIm2p3p4p5mIpIm6mIp
+triangle(6): Im1pImIp2p3p4p5mImIp6mIp
+triangle(7): Ip1pImIp2p3p4p5mImIp6mIm
+triangle(8): Im6m1pIpIm2pIpIm3p4p5mIp
+triangle(9): Im1p2pImIp3pImIp4p5m6mIp
+triangle(10): Ip6m1pImIp2pImIp3p4p5mIm
+triangle(11): Im6m1pIpIm2p3p4pImIp5mIp
+triangle(12): Im1p2pImIp3p4p5mImIp6mIp
+triangle(22): Im1p2p3p4pImIp5mIpIm6mIp
+triangle(25): Ip4p5m6m1pIpIm2pIpIm3pIm
+bubble(1): Im6m1pIpIm2p3p4p5mIp
+bubble(2): Im1p2pImIp3p4p5m6mIp
+bubble(3): Ip6m1pImIp2p3p4p5mIm
+bubble(4): Im6m1p2pIpIm3p4p5mIp
+bubble(5): Im1p2p3pImIp4p5m6mIp
+bubble(9): Im1p2p3p4pImIp5m6mIp
+bubble(11): Ip4p5m6m1pIpIm2p3pIm

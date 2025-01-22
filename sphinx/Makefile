@@ -26,7 +26,7 @@ amplitudes:
 	  echo "   :width: 100%" >> "sphinx/source/$$rst_file"; \
 	done; \
 	for dir in $$(find amplitudes/ -type d); do \
-	  if [ "$$(basename $$dir)" != "coeffs" ] && [ "$$(basename $$dir)" != "amplitudes" ]; then \
+	  if [ "$$(basename $$dir)" != "coeffs" ] && [ "$$(basename $$dir)" != "__pycache__" ] && [ "$$(basename $$dir)" != ".ipynb_checkpoints" ] && [ "$$(basename $$dir)" != "amplitudes" ]; then \
 	    base_dir="$$(basename $$dir)"; \
 	    rst_file="sphinx/source/$$dir/$$base_dir.rst"; \
 		if [ -f "$$dir/README.md" ]; then \
