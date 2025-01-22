@@ -9,6 +9,7 @@ setup(
     name='antares-results',
     version=version,
     license='GNU General Public License v3.0',
+    license_files=('LICENSE.txt', ),
     description='Spinor Helicity Amplitudes',
     long_description=long_description,
     long_description_content_type='text/markdown',
