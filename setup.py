@@ -6,7 +6,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name='antares_results',
+    name='antares-results',
     version=version,
     license='GNU General Public License v3.0',
     description='Spinor Helicity Amplitudes',
