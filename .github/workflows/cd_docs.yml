@@ -25,6 +25,13 @@ jobs:
         token: ${{ secrets.GitHubActions_PAT }}
         path: antares
 
+    - name: Checkout another Repo (linac)
+      uses: actions/checkout@v4
+      with:
+        repository: GDeLaurentis/linac-dev
+        token: ${{ secrets.GitHubActions_PAT }}
+        path: linac
+
     - name: Checkout this Repo
       uses: actions/checkout@v4
       with:
@@ -35,6 +42,7 @@ jobs:
         sudo apt-get install -y ghostscript imagemagick pandoc
         python -m pip install --upgrade pip
         pip install sphinx sphinx-rtd-theme
+        pip install -e linac
         pip install -e antares-results
         pip install -e antares
 
