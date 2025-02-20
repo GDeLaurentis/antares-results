@@ -6,7 +6,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name='antares-results',
+    name='antares_results',
     version=version,
     license='GNU General Public License v3.0',
     license_file='LICENSE.txt',
@@ -25,7 +25,8 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=['lips',
-                      'recommonmark'],
+                      'recommonmark',
+                      'termcolor'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Science/Research',
