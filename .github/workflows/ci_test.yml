@@ -44,6 +44,7 @@ jobs:
         repository: GDeLaurentis/linac-dev
         token: ${{ secrets.GitHubActions_PAT }}
         path: linac
+        ref: feature-vector-spaces
 
     - name: Checkout another Repo (Pentagon Functions)
       run: git clone https://gitlab.com/GDeLaurentis/pentagon-functions-python-interface.git PentagonFunctions-cpp
