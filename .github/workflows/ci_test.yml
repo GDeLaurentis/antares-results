@@ -65,7 +65,7 @@ jobs:
     - name: Install dependencies and build Pentagon Functions
       working-directory: PentagonFunctions-cpp
       run: |
-        pip install -e .
+        pip install -e .[with-cpp]
         python setup.py build_ext --verbose
 
     - name: Test with pytest
