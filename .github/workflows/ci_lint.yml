@@ -33,4 +33,4 @@ jobs:
     - name: Lint with flake8
       run: |
         cd antares-results
-        flake8 amplitudes/ --count --max-line-length=190 --statistics --verbose
+        flake8 antares_results/ --count --max-line-length=190 --statistics --verbose
