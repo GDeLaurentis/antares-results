@@ -8,8 +8,8 @@ BUILDDIR      = build
 
 # Target to create amplitudes
 amplitudes:
-	@cd .. && mkdir -p sphinx/source/_static/amplitudes/ && \
-	for texfile in $$(find amplitudes/ -name "*.tex"); do \
+	@cd .. && mkdir -p sphinx/source/_static/antares_results/ && \
+	for texfile in $$(find antares_results/ -name "*.tex"); do \
 	  DIR=$$(dirname $$texfile); \
 	  mkdir -p sphinx/source/_static/$$DIR; \
 	  mkdir -p sphinx/source/$$DIR/coeffs; \
@@ -25,7 +25,7 @@ amplitudes:
 	  echo ".. image:: /_static/$$image_file" >> "sphinx/source/$$rst_file"; \
 	  echo "   :width: 100%" >> "sphinx/source/$$rst_file"; \
 	done; \
-	for dir in $$(find amplitudes/ -type d); do \
+	for dir in $$(find antares_results/ -type d); do \
 	  if [ "$$(basename $$dir)" != "coeffs" ] && [ "$$(basename $$dir)" != "__pycache__" ] && [ "$$(basename $$dir)" != ".ipynb_checkpoints" ] && [ "$$(basename $$dir)" != "amplitudes" ]; then \
 	    base_dir="$$(basename $$dir)"; \
 	    rst_file="sphinx/source/$$dir/$$base_dir.rst"; \
@@ -63,4 +63,4 @@ github:
 	@rm -r $(BUILDDIR)
 
 clean:
-	@rm -rf source/_static source/amplitudes ../docs
+	@rm -rf source/_static source/antares_results ../docs

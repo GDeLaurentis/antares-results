@@ -1,6 +1,6 @@
 docs/
 sphinx/source/_static/
-sphinx/source/amplitudes/
+sphinx/source/antares_results/
 __pycache__/
 *~
 *.egg-info/

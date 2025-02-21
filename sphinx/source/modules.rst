@@ -4,5 +4,5 @@ amplitudes
 .. toctree::
    :maxdepth: 4
 
-   amplitudes.Vjj
-   amplitudes.jjjj
+   antares_results.Vjj
+   antares_results.jjjj

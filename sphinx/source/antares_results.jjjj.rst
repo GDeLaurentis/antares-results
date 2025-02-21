@@ -4,7 +4,7 @@ jjjj
 momenta.py
 ----------
 
-.. automodule:: amplitudes.jjjj.momenta
+.. automodule:: antares_results.jjjj.momenta
    :members:
    :undoc-members:
    :show-inheritance:
@@ -13,7 +13,7 @@ momenta.py
 target_values.py
 ----------------
 
-.. automodule:: amplitudes.jjjj.target_values
+.. automodule:: antares_results.jjjj.target_values
    :members:
    :undoc-members:
    :show-inheritance:
@@ -22,7 +22,7 @@ target_values.py
 test_coefficients.py
 --------------------------------
 
-.. automodule:: amplitudes.jjjj.test_coefficients
+.. automodule:: antares_results.jjjj.test_coefficients
    :members:
    :undoc-members:
    :show-inheritance:
