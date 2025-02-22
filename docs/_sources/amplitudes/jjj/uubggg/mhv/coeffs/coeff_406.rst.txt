@@ -1,5 +1,0 @@
-coeff_406
-==================
-
-.. image:: /_static/amplitudes/jjj/uubggg/mhv/coeff_406.png
-   :width: 100%

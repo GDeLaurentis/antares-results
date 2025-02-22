@@ -1,5 +1,0 @@
-box(11)
-==================
-
-.. image:: /_static/amplitudes/jjjj/gggggg/pppmpm/box(11).png
-   :width: 100%

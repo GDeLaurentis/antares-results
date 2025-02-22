@@ -1,5 +1,0 @@
-triangle(9)
-==================
-
-.. image:: /_static/amplitudes/jjjj/gggggg/pppmmm/triangle(9).png
-   :width: 100%

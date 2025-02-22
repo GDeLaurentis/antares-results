@@ -1,0 +1,5 @@
+box(6)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/ppmpmm/box(6).png
+   :width: 100%

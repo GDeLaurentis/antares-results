@@ -1,0 +1,5 @@
+coeff_305
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/mhv/coeff_305.png
+   :width: 100%

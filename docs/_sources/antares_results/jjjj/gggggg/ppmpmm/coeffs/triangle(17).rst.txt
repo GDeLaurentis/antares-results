@@ -1,0 +1,5 @@
+triangle(17)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/ppmpmm/triangle(17).png
+   :width: 100%

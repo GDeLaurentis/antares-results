@@ -1,0 +1,5 @@
+coeff_20
+==================
+
+.. image:: /_static/antares_results/Vjj/qggqll/nmhv/coeff_20.png
+   :width: 100%

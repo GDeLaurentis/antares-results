@@ -1,0 +1,9 @@
+antares_results
+======================
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   */*
+

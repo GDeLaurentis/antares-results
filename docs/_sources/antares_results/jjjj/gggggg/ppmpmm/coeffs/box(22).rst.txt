@@ -1,0 +1,5 @@
+box(22)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/ppmpmm/box(22).png
+   :width: 100%

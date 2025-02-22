@@ -1,0 +1,5 @@
+coeff_118
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/mhv/coeff_118.png
+   :width: 100%

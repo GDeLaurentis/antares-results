@@ -1,0 +1,5 @@
+triangle(9)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/ppmpmm/triangle(9).png
+   :width: 100%

@@ -1,0 +1,5 @@
+triangle(12)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/pppmpm/triangle(12).png
+   :width: 100%

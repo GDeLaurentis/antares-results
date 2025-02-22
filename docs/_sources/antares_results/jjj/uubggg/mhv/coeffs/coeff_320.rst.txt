@@ -1,0 +1,5 @@
+coeff_320
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/mhv/coeff_320.png
+   :width: 100%

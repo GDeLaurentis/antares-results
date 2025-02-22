@@ -1,0 +1,5 @@
+coeff_0
+==================
+
+.. image:: /_static/antares_results/jjj/ggggg/all_plus/coeff_0.png
+   :width: 100%

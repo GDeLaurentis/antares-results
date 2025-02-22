@@ -1,0 +1,5 @@
+coeff_70
+==================
+
+.. image:: /_static/antares_results/jjj/ggggg/mhv/coeff_70.png
+   :width: 100%

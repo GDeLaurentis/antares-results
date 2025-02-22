@@ -1,5 +1,0 @@
-coeff_200
-==================
-
-.. image:: /_static/amplitudes/jjj/uubggg/mhv/coeff_200.png
-   :width: 100%

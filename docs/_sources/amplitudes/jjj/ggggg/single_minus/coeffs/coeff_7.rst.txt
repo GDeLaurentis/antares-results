@@ -1,5 +1,0 @@
-coeff_7
-==================
-
-.. image:: /_static/amplitudes/jjj/ggggg/single_minus/coeff_7.png
-   :width: 100%

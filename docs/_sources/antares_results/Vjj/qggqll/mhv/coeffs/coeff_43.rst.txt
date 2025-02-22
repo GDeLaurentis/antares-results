@@ -1,0 +1,5 @@
+coeff_43
+==================
+
+.. image:: /_static/antares_results/Vjj/qggqll/mhv/coeff_43.png
+   :width: 100%

@@ -1,5 +1,0 @@
-rational
-==================
-
-.. image:: /_static/amplitudes/jjjj/gggggg/pppppp/rational.png
-   :width: 100%

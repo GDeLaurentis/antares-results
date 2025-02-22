@@ -1,0 +1,5 @@
+triangle(19)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/pmpmpm/triangle(19).png
+   :width: 100%

@@ -1,0 +1,5 @@
+coeff_395
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/mhv/coeff_395.png
+   :width: 100%

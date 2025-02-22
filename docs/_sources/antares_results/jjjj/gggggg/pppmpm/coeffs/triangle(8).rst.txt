@@ -1,0 +1,5 @@
+triangle(8)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/pppmpm/triangle(8).png
+   :width: 100%

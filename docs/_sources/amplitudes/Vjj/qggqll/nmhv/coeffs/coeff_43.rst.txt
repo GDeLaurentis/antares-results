@@ -1,5 +1,0 @@
-coeff_43
-==================
-
-.. image:: /_static/amplitudes/Vjj/qggqll/nmhv/coeff_43.png
-   :width: 100%

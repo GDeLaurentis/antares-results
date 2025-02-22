@@ -1,0 +1,5 @@
+coeff_34
+==================
+
+.. image:: /_static/antares_results/jjj/uubddbg/mhv/coeff_34.png
+   :width: 100%

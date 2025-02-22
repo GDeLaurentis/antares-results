@@ -1,0 +1,5 @@
+bubble(8)
+==================
+
+.. image:: /_static/antares_results/jjjj/gggggg/pmpmpm/bubble(8).png
+   :width: 100%

@@ -1,5 +1,0 @@
-tree
-==================
-
-.. image:: /_static/amplitudes/jjjj/gggggg/ppmpmm/tree.png
-   :width: 100%

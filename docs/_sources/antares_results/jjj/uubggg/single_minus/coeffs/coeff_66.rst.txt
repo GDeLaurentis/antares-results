@@ -1,0 +1,5 @@
+coeff_66
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/single_minus/coeff_66.png
+   :width: 100%

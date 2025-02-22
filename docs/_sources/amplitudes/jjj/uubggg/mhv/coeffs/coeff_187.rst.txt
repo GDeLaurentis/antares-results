@@ -1,5 +1,0 @@
-coeff_187
-==================
-
-.. image:: /_static/amplitudes/jjj/uubggg/mhv/coeff_187.png
-   :width: 100%

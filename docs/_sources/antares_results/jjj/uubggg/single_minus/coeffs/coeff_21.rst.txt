@@ -1,0 +1,5 @@
+coeff_21
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/single_minus/coeff_21.png
+   :width: 100%

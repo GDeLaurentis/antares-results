@@ -1,0 +1,5 @@
+coeff_70
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/single_minus/coeff_70.png
+   :width: 100%

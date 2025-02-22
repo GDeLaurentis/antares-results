@@ -1,5 +1,0 @@
-coeff_84
-==================
-
-.. image:: /_static/amplitudes/Vjj/qggqll/nmhv/coeff_84.png
-   :width: 100%

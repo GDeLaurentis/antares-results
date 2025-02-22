@@ -1,5 +1,0 @@
-triangle(48)
-==================
-
-.. image:: /_static/amplitudes/jjjj/gggggg/ppmpmm/triangle(48).png
-   :width: 100%

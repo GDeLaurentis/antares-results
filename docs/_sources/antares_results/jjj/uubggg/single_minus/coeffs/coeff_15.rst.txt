@@ -1,0 +1,5 @@
+coeff_15
+==================
+
+.. image:: /_static/antares_results/jjj/uubggg/single_minus/coeff_15.png
+   :width: 100%

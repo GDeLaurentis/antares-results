@@ -1,5 +1,0 @@
-coeff_88
-==================
-
-.. image:: /_static/amplitudes/jjj/uubggg/single_minus/coeff_88.png
-   :width: 100%
