@@ -25,7 +25,8 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=['lips',
-                      'recommonmark'],
+                      'recommonmark',
+                      'termcolor'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Science/Research',

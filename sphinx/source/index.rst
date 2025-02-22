@@ -14,7 +14,7 @@ List of Amplitudes
    :glob:
    :maxdepth: 2
 
-   amplitudes/*/*
+   antares_results/*/*
 
 
 Documentation

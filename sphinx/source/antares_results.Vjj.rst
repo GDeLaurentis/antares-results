@@ -4,7 +4,7 @@ Vjj
 momenta.py
 ----------
 
-.. automodule:: amplitudes.Vjj.momenta
+.. automodule:: antares_results.Vjj.momenta
    :members:
    :undoc-members:
    :show-inheritance:
@@ -13,7 +13,7 @@ momenta.py
 target_values.py
 ----------------
 
-.. automodule:: amplitudes.Vjj.target_values
+.. automodule:: antares_results.Vjj.target_values
    :members:
    :undoc-members:
    :show-inheritance:
@@ -22,7 +22,7 @@ target_values.py
 test_remainders.py
 ------------------
 
-.. automodule:: amplitudes.Vjj.test_remainders
+.. automodule:: antares_results.Vjj.test_remainders
    :members:
    :undoc-members:
    :show-inheritance:

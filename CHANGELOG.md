@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Renamed package to 'antares_results' to avoid problems with python imports.
+
 ### Fixed
 
 ### Deprecated
