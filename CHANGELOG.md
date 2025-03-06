@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `__init__.py` to most folders of computed processes, to allow import in python.
+- Example usage in `Quick Start` on README.
+
 ### Changed
 
 - Renamed package to 'antares_results' to avoid problems with python imports.
