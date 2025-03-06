@@ -47,7 +47,7 @@ jobs:
         ref: feature-vector-spaces
 
     - name: Checkout another Repo (Pentagon Functions)
-      run: git clone https://github.com/GDeLaurentis/py-pentagon-functions.git PentagonFunctions-cpp
+      run: git clone https://github.com/GDeLaurentis/py-pentagon-functions.git
 
     - name: Checkout this Repo
       uses: actions/checkout@v4
@@ -63,10 +63,10 @@ jobs:
         pip install -e antares
 
     - name: Install dependencies and build Pentagon Functions
-      working-directory: PentagonFunctions-cpp
+      working-directory: py-pentagon-functions
       run: |
         pip install -ve .[with-cpp]
-        python setup.py build_ext --verbose
+    #    python setup.py build_ext --verbose
 
     - name: Test with pytest
       run: |
