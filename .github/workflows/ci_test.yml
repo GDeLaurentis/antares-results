@@ -66,7 +66,13 @@ jobs:
       working-directory: py-pentagon-functions
       run: |
         pip install -ve .[with-cpp]
-    #    python setup.py build_ext --verbose
+        python setup.py build_ext --verbose
+        ls /home/runner/local/bin
+
+    - name: Check Pentagon Functions installation
+      run: |
+        ls /home/runner/local/bin
+        python -c "import pentagon_functions; print(pentagon_functions.pentagon_functions.script_directory)"
 
     - name: Test with pytest
       run: |
