@@ -47,7 +47,7 @@ jobs:
         ref: feature-vector-spaces
 
     - name: Checkout another Repo (Pentagon Functions)
-      run: git clone git@github.com:GDeLaurentis/py-pentagon-functions.git PentagonFunctions-cpp
+      run: git clone https://github.com/GDeLaurentis/py-pentagon-functions.git PentagonFunctions-cpp
 
     - name: Checkout this Repo
       uses: actions/checkout@v4
