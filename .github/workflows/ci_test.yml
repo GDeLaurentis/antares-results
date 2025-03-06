@@ -65,6 +65,7 @@ jobs:
     - name: Install dependencies and build Pentagon Functions
       working-directory: py-pentagon-functions
       run: |
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/runner/local/lib/x86_64-linux-gnu
         pip install -ve .[with-cpp]
         python setup.py build_ext --verbose
 
