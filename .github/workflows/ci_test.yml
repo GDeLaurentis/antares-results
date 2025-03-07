@@ -65,16 +65,16 @@ jobs:
     - name: Install dependencies and build Pentagon Functions
       working-directory: py-pentagon-functions
       run: |
-        export LD_LIBRARY_PATH="/home/runner/local/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH}"
-        echo "$PATH" && echo "$LD_LIBRARY_PATH"
-        pip install -ve .[with-cpp]
-        python setup.py build_ext --verbose
+        echo "LD_LIBRARY_PATH=/home/runner/local/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH}" >> $GITHUB_ENV
+        echo "Updated LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
+      #  pip install -ve .[with-cpp]
+      #  python setup.py build_ext --verbose
 
     - name: Check Pentagon Functions installation
       run: |
         ls /home/runner/local/bin
         python -c "import pentagon_functions; print(pentagon_functions.pentagon_functions.script_directory)"
-        echo "$PATH" && echo "$LD_LIBRARY_PATH"
+        echo "Checking LD_LIBRARY_PATH persisted across steps: $LD_LIBRARY_PATH"
 
     - name: Test with pytest
       run: |
