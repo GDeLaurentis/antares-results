@@ -10,6 +10,7 @@ from .momenta import oPs
 from .target_values import target_values
 
 
+do_assertions = True
 this_script_path = Path(__file__).resolve().parent
 
 
@@ -23,8 +24,11 @@ def test_independent_coefficients(helicity, coeff_targets):
         actual = 0 if oTerms == 0 else complex(oTerms[0](oPs))
         print("actual: ", actual)
         print("target: ", target)
-        if numpy.isclose(actual, target):
-            print(colored("PASSED", "green"))
+        if do_assertions:
+            assert numpy.isclose(actual, target)
         else:
-            print(colored("FAILED", "red"))
+            if numpy.isclose(actual, target):
+                print(colored("PASSED", "green"))
+            else:
+                print(colored("FAILED", "red"))
         print()
