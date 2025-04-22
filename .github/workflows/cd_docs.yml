@@ -52,7 +52,7 @@ jobs:
     - name: Build docs
       run: |
         cd sphinx
-        make amplitudes
+        make amplitudes -j4
         make github
 
     - name: setup git config

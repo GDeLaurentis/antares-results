@@ -31,14 +31,33 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Checkout another Repo (antares)
+    - name: Checkout another Repo (pyadic)
+      uses: actions/checkout@v4
+      with:
+        repository: GDeLaurentis/pyadic
+        path: pyadic
+
+    - name: Checkout another Repo (syngular)
+      uses: actions/checkout@v4
+      with:
+        repository: GDeLaurentis/syngular
+        path: syngular
+
+    - name: Checkout another private Repo (lips-dev)
+      uses: actions/checkout@v4
+      with:
+        repository: GDeLaurentis/lips-dev
+        token: ${{ secrets.GitHubActions_PAT }}
+        path: lips
+
+    - name: Checkout another private Repo (antares-dev)
       uses: actions/checkout@v4
       with:
         repository: GDeLaurentis/antares-dev
         token: ${{ secrets.GitHubActions_PAT }}
         path: antares
 
-    - name: Checkout another Repo (linac)
+    - name: Checkout another private Repo (linac-dev)
       uses: actions/checkout@v4
       with:
         repository: GDeLaurentis/linac-dev

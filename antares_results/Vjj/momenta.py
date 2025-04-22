@@ -40,7 +40,7 @@ for i, oP in enumerate(oPs):
 
 # check phase space point satisfies momentum conservation and is on-shell
 assert numpy.max(abs(oPs.total_mom)) < 10 ** - 80
-assert numpy.max(abs(numpy.array(oPs.masses))) < 10 ** - 80
+assert numpy.max(abs(numpy.array(oPs.m2s))) < 10 ** - 80
 
 # check mandelstams as given in arXiv:2110.07541, eq. C.1
 assert Q(str(oPs("s12").real)).limit_denominator(10 ** 9) == Q('5')
