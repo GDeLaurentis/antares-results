@@ -49,6 +49,7 @@ jobs:
       working-directory: py-pentagon-functions
       run: |
         export LD_LIBRARY_PATH="/home/runner/local/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH}"
+        export NINJA_CORES=4
         pip install -ve .[with-cpp]
         python setup.py build_ext --verbose
 
