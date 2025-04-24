@@ -1,0 +1,5 @@
+box4x2x1xm000
+==================
+
+.. image:: /_static/antares_results/ttH/qqttH/pm/box4x2x1xm000.png
+   :width: 100%

@@ -1,0 +1,5 @@
+box3x4x12xm0mm
+==================
+
+.. image:: /_static/antares_results/ttH/qqttH/pm/box3x4x12xm0mm.png
+   :width: 100%

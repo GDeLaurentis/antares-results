@@ -1,0 +1,5 @@
+tri12x3x00m
+==================
+
+.. image:: /_static/antares_results/ttH/qqttH/pm/tri12x3x00m.png
+   :width: 100%

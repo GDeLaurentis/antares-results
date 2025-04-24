@@ -1,0 +1,5 @@
+bub12xmm
+==================
+
+.. image:: /_static/antares_results/ttH/qqttH/pm/bub12xmm.png
+   :width: 100%
