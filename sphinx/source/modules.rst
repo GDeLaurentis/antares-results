@@ -6,3 +6,4 @@ amplitudes
 
    antares_results.Vjj
    antares_results.jjjj
+   antares_results.ttH
