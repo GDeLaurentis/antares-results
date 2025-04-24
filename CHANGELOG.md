@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - ttH one-loop coefficients.
-- `__init__.py` to most folders of computed processes, to allow import in python.
+- `__init__.py` to most folders of computed processes, to allow import in python (see README.md).
 - Example usage in `Quick Start` on README.
 
 ### Changed
