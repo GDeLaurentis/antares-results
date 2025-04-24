@@ -13,7 +13,9 @@ This is a repository for spinor-helicity amplitudes reconstructed from numerical
 
 ## Quick Start
 
-Load all $qggqV$ coefficients (two-loop planar) and evaluate them (for exmaple at a $\mathbb{F}_p$ phase space point). These are a basis of the vector space of pentagon-function coefficients.
+### Vjj (two-loops planar)
+
+Load all $qggqV$ coefficients and evaluate them (for exmaple at a $\mathbb{F}_p$ phase space point). These are a basis of the vector space of pentagon-function coefficients.
 
 ```python
 In [1]: from antares_results.Vjj.qggqll.mhv import lTerms
@@ -32,10 +34,12 @@ Out [4]: [1162389822 % 2147483647, 1610387318 % 2147483647, 173910601 % 21474836
 
 Floating point (real or complex) and $p$-adic phase space points work much in the same way.
 
-Load all $qqttH$ coefficients (one-loop). These are directly coefficients of the respective Feynman integrals (labeld by external legs and internal mass routings).
+### ttH (one-loop)
+
+Load all $qqttH$ coefficients. These are directly coefficients of the respective Feynman integrals (labeld by external legs and internal mass routings).
 
 ```python
-In [1]: from antares_results.ttH.qqttH.pm import qqttH_pm_coeffs
+In [1]: from antares_results.ttH.qqttH.pm import coeffs as qqttH_pm_coeffs
 In [2]: qqttH_pm_coeffs.keys()
 Out [2]:  dict_keys(['tree', 'bub12x00', 'tri12x3x00m', 'box3x12x4xm00m', 'tri13x24xm0m', 'box3x4x12xm0mm', 'box3x1x24xm00m', 'bub13xm0', 'bub34xmm', 'tri124x3xm0m', 'bub1234xmm', 'tri12x3xmm0', 'bub123xm0', 'box4x2x1xm000', 'tri12x34xmmm', 'bub12xmm'])
 In [3]: from antares_results.ttH.momenta import oPsKCheck  # load a phase space point
@@ -58,3 +62,11 @@ Out[4]:
  'tri12x34xmmm': mpc(real='-4.354721966504684239', imag='-3.285466744291004104'),
  'bub12xmm': mpc(real='-0.3362765929597263115', imag='-0.4684054239865742472')}
 ```
+
+### jjj (two-loops full-color)
+
+Analogous to $Vjj$.
+
+### jjjj (one-loop)
+
+Analogous to $ttH$.
