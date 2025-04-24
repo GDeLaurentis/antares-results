@@ -3,12 +3,13 @@ import numpy
 import pytest
 
 from pathlib import Path
+from fractions import Fraction
 
 from pentagon_functions import evaluate_pentagon_functions, PentagonMonomial
 
 from antares.terms.lterms import TermsList
 
-from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
+# from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
 
 from .momenta import oPs
 from .target_values import target_values
@@ -80,3 +81,35 @@ def test_Vjj_helicity_remainder(amppart, loop, nf):
     error = abs(target_values[(amppart, loop, nf)] - complex(numerical_finite_remainder))
 
     assert numpy.isclose(target_values[(amppart, loop, nf)], complex(numerical_finite_remainder)), f"Error: {error}"
+
+
+# Function from linac (coming soon)
+
+def matrix_from_coo(coo):
+    """Converts a COO dictionary back to a numpy array."""
+    rows = max([row for row, column in coo.keys()]) + 1
+    columns = max([column for row, column in coo.keys()]) + 1
+    matrix = numpy.zeros((rows, columns), dtype=object)
+    for key in coo.keys():
+        matrix[key] = coo[key]
+    return matrix
+
+
+def coo_from_plain_txt_coo(file_name, dtype=Fraction):
+    """Loads coo from json containing coo dictionary."""
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
+    coo = {}
+    for line in lines:
+        key0, key1, val = line.split(" ")
+        coo[(eval(key0), eval(key1))] = dtype(val)
+    return coo
+
+
+def matrix_from_plain_txt_coo(file_name, dtype=Fraction):
+    """Loads coo from json containing coo dictionary."""
+    coo = coo_from_plain_txt_coo(file_name, dtype=dtype)
+    matrix = matrix_from_coo(coo)
+    return matrix
+
+# end of function from linac
