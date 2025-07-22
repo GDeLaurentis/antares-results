@@ -1,0 +1,5 @@
+c_1x2
+==================
+
+.. image:: /_static/antares_results/HHH/ggHHH/pm/c_1x2.png
+   :width: 100%

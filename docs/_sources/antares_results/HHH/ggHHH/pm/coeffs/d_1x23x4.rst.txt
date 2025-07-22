@@ -1,0 +1,5 @@
+d_1x23x4
+==================
+
+.. image:: /_static/antares_results/HHH/ggHHH/pm/d_1x23x4.png
+   :width: 100%

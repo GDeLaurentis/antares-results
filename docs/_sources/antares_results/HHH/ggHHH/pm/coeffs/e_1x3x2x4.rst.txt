@@ -1,0 +1,5 @@
+e_1x3x2x4
+==================
+
+.. image:: /_static/antares_results/HHH/ggHHH/pm/e_1x3x2x4.png
+   :width: 100%

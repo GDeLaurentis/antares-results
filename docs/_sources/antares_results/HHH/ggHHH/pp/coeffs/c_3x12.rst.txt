@@ -1,0 +1,5 @@
+c_3x12
+==================
+
+.. image:: /_static/antares_results/HHH/ggHHH/pp/c_3x12.png
+   :width: 100%

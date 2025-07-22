@@ -1,0 +1,5 @@
+ered_1x3x2x4_2
+==================
+
+.. image:: /_static/antares_results/HHH/ggHHH/ered_1x3x2x4_2.png
+   :width: 100%

@@ -1,0 +1,15 @@
+pp → ttH
+========
+
+Sub-channel :math:`qqttH` computed in collaboration with `John M.
+Campbell <https://inspirehep.net/authors/1014644>`__ and `R. Keith
+Ellis <https://inspirehep.net/authors/1010816>`__.
+
+Preprint coming soon.
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   */*
+
