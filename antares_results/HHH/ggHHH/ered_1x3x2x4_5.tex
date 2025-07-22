@@ -1,0 +1,17 @@
+\documentclass[varwidth, border=5pt]{standalone}
+\usepackage[paperwidth=575cm, paperheight=575cm, margin=1in, landscape]{geometry}
+\DeclareMathSizes{1}{1}{1}{0.1}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\trfive}{\text{tr5}}
+\standaloneenv{my}
+
+\begin{document}
+\begin{my}
+$\begin{gathered}
+\scriptscriptstyle\frac{1/2[12]⟨1|𝟑|2]⟨2|𝟑|1]⟨2|𝟒|𝟓|1⟩}{(⟨1|𝟑|2]⟨2|𝟒|𝟓|1⟩[1|𝟑|2⟩[2|𝟒|𝟓|1]+m_t²tr5(1|2|𝟑|𝟒)²)} +\\
+\scriptscriptstyle(12𝟑𝟒𝟓,\;\text{True}) \phantom{+}
+\end{gathered}$
+\end{my}
+\end{document}
