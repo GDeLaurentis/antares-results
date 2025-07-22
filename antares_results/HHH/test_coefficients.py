@@ -44,7 +44,7 @@ def test_ggHHH_reduction_coefficients_in_FF(coeff, target):
     print("actual: ", actual)
     print("target: ", target)
     assert actual == target
-    
+
 
 @pytest.mark.parametrize(
     "coeff, target", target_values_pp_C.items()
