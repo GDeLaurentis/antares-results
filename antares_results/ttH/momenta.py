@@ -41,14 +41,14 @@ oPsKCheck[3]._r_sp_u = numpy.vectorize(mpmath.mpc)(numpy.array([[(0.157541392144
 oPsKCheck[3]._l_sp_d = numpy.vectorize(mpmath.mpc)(numpy.array([[(1.3442469155889438), (0.73436052092409343 - 0.64204688820310396j)]]))
 oPsKCheck[3]._r_sp_u_to_r_sp_d()
 oPsKCheck[3]._l_sp_d_to_l_sp_u()
-oPsKCheck[3].spin_index = "u"
+oPsKCheck[3].spin_index = ("u", 1)
 oPsKCheck[4]._r_sp_d = numpy.vectorize(mpmath.mpc)(numpy.array([[(1.01625936813760885E-002 - 0.22054306530403212j)],
                                                                 [(0.67179178959347197 - 0.19005528425990376j)]]))
 oPsKCheck[4]._l_sp_u = numpy.vectorize(mpmath.mpc)(numpy.array([[(0.62161365611385844 + 1.5137881459404428j)],
                                                                 [(-0.80227495696756812)]]))
 oPsKCheck[4]._r_sp_d_to_r_sp_u()
 oPsKCheck[4]._l_sp_u_to_l_sp_d()
-oPsKCheck[4].spin_index = "d"
+oPsKCheck[4].spin_index = ("d", 1)
 
 oPsKCheck.m_t = oPsKCheck.field.sqrt(oPsKCheck("s_3"))
 oPsKCheck.m_h = oPsKCheck.field.sqrt(oPsKCheck("s_5"))

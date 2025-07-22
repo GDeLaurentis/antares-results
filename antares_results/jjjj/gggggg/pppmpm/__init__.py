@@ -5,5 +5,5 @@ here = Path(__file__).parent
 
 coeffs = {}
 for file in here.glob("*.tex"):
-    res = LoadResults(f"{here}/{file.stem}")[0]
+    res = LoadResults(f"{here}/{file.stem}", multiplicity=6)[0]
     coeffs[file.stem] = (res[0] if res != 0 else res)
