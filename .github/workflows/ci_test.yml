@@ -31,6 +31,12 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
+    - name: Checkout another Repo (antares)
+      uses: actions/checkout@v4
+      with:
+        repository: GDeLaurentis/antares
+        path: antares
+
     - name: Checkout another Repo (Pentagon Functions)
       run: git clone https://github.com/GDeLaurentis/py-pentagon-functions.git
 
@@ -42,7 +48,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pytest-cov antares-hep
+        pip install pytest pytest-cov
+        pip install -e antares
         pip install -e antares-results
 
     - name: Install dependencies and build Pentagon Functions
