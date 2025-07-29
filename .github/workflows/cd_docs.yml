@@ -8,7 +8,7 @@ on:
 jobs:
 
   BuildDocs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
         pip install -e antares
 
     - name: Install LaTeX
-      run: sudo apt-get install -y texlive-luatex texlive-fonts-recommended texlive-latex-recommended  # texlive-latex-extra 
+      run: sudo apt-get install -y texlive-luatex texlive-fonts-recommended texlive-latex-recommended texlive-latex-extra
 
     - name: Build docs
       run: |
