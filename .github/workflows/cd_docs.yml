@@ -31,7 +31,7 @@ jobs:
         pip install -e antares-results
 
     - name: Install LaTeX
-      run: sudo apt-get install -y texlive-luatex texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
+      run: sudo apt-get install -y texlive-luatex texlive-fonts-recommended texlive-latex-recommended  # texlive-latex-extra 
 
     - name: Build docs
       run: |
