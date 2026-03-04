@@ -20,7 +20,7 @@ this_script_path = Path(__file__).resolve().parent
 def test_independent_coefficients(helicity, coeff_targets):
     for coeff, target in coeff_targets.items():
         print(helicity, coeff)
-        oTerms = LoadResults(f"{this_script_path}/gggggg/{helicity}/{coeff}")[0]
+        oTerms = LoadResults(f"{this_script_path}/gggggg/{helicity}/{coeff}", multiplicity=6)[0]
         actual = 0 if oTerms == 0 else complex(oTerms[0](oPs))
         print("actual: ", actual)
         print("target: ", target)

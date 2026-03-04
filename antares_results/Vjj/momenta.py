@@ -53,3 +53,6 @@ assert Q(str(oPs("s345").real)).limit_denominator(10 ** 9) == Q('4304788/896077'
 assert Q(str(oPs("s45").real)).limit_denominator(10 ** 9) == Q('2911673/3928953')
 assert Q(str(oPs("s16").real)).limit_denominator(10 ** 9) == Q('-186065/1998941')
 assert oPs("tr5(1|2|3|4)").imag < 0
+
+# Five-point one-mass spin-covariant phase space point
+oPsAllUp = oPs.cluster([[1, ], [2, ], [3, ], [4, ], [5, 6], ], massive_spins=((5, ('u', all), ('u', all), ),))
