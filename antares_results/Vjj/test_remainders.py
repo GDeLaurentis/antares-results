@@ -108,16 +108,16 @@ def test_Vjj_helicity_vs_spin_spinor_basis_functions(amppart):
     assert numpy.all(numpy.array(lTerms6pt(oPsCheck6pt)) * oPsCheck6pt("s_56") == lTerms5pt(oPsCheck5pt)), "Failed to match scalar evaluation back to six point result."
 
     # move this transpose to realign indices across the basis in the definition of TermsList.__call__ ?
-    res = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] == False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllDownUp))]
+    res = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] is False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllDownUp))]
     res = [entry[0, 1] for entry in res]
     assert res == lTerms5pt(oPsCheck5pt), "Failed to match A_I=0^J=1 component back to scalar evaluation."
 
-    resDownUp = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] == False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllDownUp))]
-    resAllUp = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] == False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllUp))]
+    resDownUp = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] is False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllDownUp))]
+    resAllUp = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] is False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllUp))]
     assert all([numpy.all(-LeviCivita @ a == b) for a, b in zip(resDownUp, resAllUp)]), "Failed covariance check, raise left index."
 
-    resUpDown = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] == False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllUpDown))]
-    resAllUp = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] == False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllUp))]
+    resUpDown = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] is False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllUpDown))]
+    resAllUp = [entry if isinstance(lTerms5pt[i], Terms) or lTerms5pt[i][1] is False else entry.T for i, entry in enumerate(lTerms5pt(oPsCheck5ptAllUp))]
     assert all([numpy.all(a @ LeviCivita == b) for a, b in zip(resUpDown, resAllUp)]), "Failed covariance check, raise right index."
 
 
@@ -176,10 +176,16 @@ def test_Vjj_spin_spinor_remainder(amppart, loop, nf):
 
         numerical_finite_remainder_5pt = numpy.einsum('xIJ,xy,y->IJ', numerical_rational_basis_5pt, rational_matrix, numpy.array(numerical_pentagon_basis))
 
-    assert numpy.all(numpy.isclose(numerical_rational_basis_6pt.astype(complex), (numerical_rational_basis_5pt / oPs("s56")).astype(complex)[:, 1, 1])), "Failed to match ε+ coeffs to 6pt"
-    assert numpy.all(numpy.isclose(numerical_rational_basis_6pt_swapped_current.astype(complex), -(numerical_rational_basis_5pt / oPs("s56")).astype(complex)[:, 0, 0])), "Failed to match ε- coeffs to 6pt"
+    assert numpy.all(numpy.isclose(numerical_rational_basis_6pt.astype(complex), (numerical_rational_basis_5pt / oPs("s56")).astype(complex)[:, 1, 1])), \
+        "Failed to match ε+ coeffs to 6pt"
+    assert numpy.all(numpy.isclose(numerical_rational_basis_6pt_swapped_current.astype(complex), -(numerical_rational_basis_5pt / oPs("s56")).astype(complex)[:, 0, 0])), \
+        "Failed to match ε- coeffs to 6pt"
     if loop != 0:  # match ε+ component (normalized by its tree) to the original target values in Table 5 of 2110.07541
-        assert numpy.isclose(complex(numerical_finite_remainder_5pt[1, 1] / numerical_tree_5pt[1, 1]), target_values[(amppart, loop, nf)]), "Failed to match A+ back to original"
-    assert numpy.isclose(complex(numerical_finite_remainder_5pt[1, 1] / oPs("s56")), polarized_target_values[(amppart, loop, nf)]['ε+']), "Failed to match A+ to target"
-    assert numpy.isclose(complex(numerical_finite_remainder_5pt[0, 0] / oPs("s56")), polarized_target_values[(amppart, loop, nf)]['ε-']), "Failed to match A- to target"
-    assert numpy.isclose(complex((numerical_finite_remainder_5pt[0, 1] + numerical_finite_remainder_5pt[1, 0]) / oPs("s56")), polarized_target_values[(amppart, loop, nf)]['εL']), "Failed to match AL to target"
+        assert numpy.isclose(complex(numerical_finite_remainder_5pt[1, 1] / numerical_tree_5pt[1, 1]), target_values[(amppart, loop, nf)]), \
+            "Failed to match A+ back to original"
+    assert numpy.isclose(complex(numerical_finite_remainder_5pt[1, 1] / oPs("s56")), polarized_target_values[(amppart, loop, nf)]['ε+']), \
+        "Failed to match A+ to target"
+    assert numpy.isclose(complex(numerical_finite_remainder_5pt[0, 0] / oPs("s56")), polarized_target_values[(amppart, loop, nf)]['ε-']), \
+        "Failed to match A- to target"
+    assert numpy.isclose(complex((numerical_finite_remainder_5pt[0, 1] + numerical_finite_remainder_5pt[1, 0]) / oPs("s56")), polarized_target_values[(amppart, loop, nf)]['εL']), \
+        "Failed to match AL to target"
