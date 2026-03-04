@@ -85,6 +85,16 @@ jobs:
       with:
         path: antares-results
 
+    # Cache the installed prefix (/home/runner/local) so build_ext can skip
+    - name: Cache PentagonFunctions install prefix
+      uses: actions/cache@v4
+      with:
+        path: |
+          /home/runner/local
+        key: pf-prefix-${{ runner.os }}-py${{ matrix.python-version }}-${{ hashFiles('py-pentagon-functions/setup.py') }}
+        restore-keys: |
+          pf-prefix-${{ runner.os }}-py${{ matrix.python-version }}-
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
