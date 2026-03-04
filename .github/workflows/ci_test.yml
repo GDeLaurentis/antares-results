@@ -24,6 +24,11 @@ jobs:
         sudo apt-get update
         sudo apt-get install singular
 
+    - name: Install QD
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libqd-dev
+
     - uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
