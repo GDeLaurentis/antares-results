@@ -1,0 +1,5 @@
+coeff_6
+==================
+
+.. image:: /_static/antares_results/Vjj/qggqV/mhv/coeff_6.png
+   :width: 100%
