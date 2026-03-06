@@ -9,7 +9,7 @@ with (this_directory / "antares_results" / "version.py").open() as f:
 
 
 setup(
-    name='antares-results',
+    name='antares_results',
     version=version,
     license='GNU General Public License v3.0',
     license_file='LICENSE.txt',
