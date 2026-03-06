@@ -1,8 +1,10 @@
 import numpy
 import pytest
+import lips
 
 from pathlib import Path
 from termcolor import colored
+from pycoretools import TemporarySetting
 
 from antares.terms.terms import LoadResults
 
@@ -20,7 +22,8 @@ this_script_path = Path(__file__).resolve().parent
 def test_qqttH_coefficients_in_C(coeff, target):
     print(coeff)
     oTerms = LoadResults(f"{this_script_path}/qqttH/pm/{coeff}")[0]
-    actual = 0 if oTerms == 0 else complex(oTerms[0](oPsKCheck))
+    with TemporarySetting(lips, "conjugation_acts_on_spin_indices", True):
+        actual = 0 if oTerms == 0 else complex(oTerms[0](oPsKCheck))
     print("actual: ", actual)
     print("target: ", target)
     if do_assertions:
@@ -39,7 +42,8 @@ def test_qqttH_coefficients_in_C(coeff, target):
 def test_qqttH_coefficients_in_FF(coeff, target):
     print(coeff)
     oTerms = LoadResults(f"{this_script_path}/qqttH/pm/{coeff}")[0]
-    actual = 0 if oTerms == 0 else oTerms[0](oPsFFKCheck)
+    with TemporarySetting(lips, "conjugation_acts_on_spin_indices", True):
+        actual = 0 if oTerms == 0 else oTerms[0](oPsFFKCheck)
     print("actual: ", actual)
     print("target: ", target)
     assert actual == target
