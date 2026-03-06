@@ -27,6 +27,9 @@ setup(
     keywords=['Spinor Helicity', 'Scattering Amplitudes'],
     packages=find_packages(),
     include_package_data=True,
+    package_data={
+        "antares_results": ["**/*.tex"],
+    },
     install_requires=[
         'antares-hep',
         'lips',
