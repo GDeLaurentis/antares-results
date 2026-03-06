@@ -17,6 +17,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 
 
+## [0.1.3] - 2026-03-06
+
+### Fixed
+
+- Fixing missing .txt files from package data
+- Reactivating CI test on push (pentagon functions is now cached by github)
+
+
 ## [0.1.2] - 2026-03-06
 
 ### Fixed
@@ -84,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - jjj remainders up to two loops
 
 
-[unreleased]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.2...HEAD
+[unreleased]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/GDeLaurentis/antares-results/compare/v0.0.4...v0.1.0

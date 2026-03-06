@@ -28,7 +28,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        "antares_results": ["**/*.tex"],
+        "antares_results": ["**/*.tex", "**/*.txt", "**/*.md"],
     },
     install_requires=[
         'antares-hep',
