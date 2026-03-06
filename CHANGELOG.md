@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 
 
-## [0.1.0] - 2025-07-28 - Vjj massive spinor-helicity update
+## [0.1.0] - 2026-03-06 - Vjj massive spinor-helicity update
 
 ### Added
 
