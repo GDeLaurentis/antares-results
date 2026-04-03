@@ -1,0 +1,20 @@
+\documentclass[varwidth, border=5pt]{standalone}
+\usepackage[paperwidth=575cm, paperheight=575cm, margin=1in, landscape]{geometry}
+\DeclareMathSizes{1}{1}{1}{0.1}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\trfive}{\text{tr5}}
+\standaloneenv{my}
+
+\begin{document}
+\begin{my}
+$\begin{gathered}
+\scriptscriptstyle\frac{3⟨12⟩⟨23⟩s_{234}}{⟨13⟩²⟨24⟩⟨34⟩} +\\
+\scriptscriptstyle\frac{5/4⟨12⟩[13]⟨23⟩[34]}{⟨13⟩⟨24⟩⟨1|𝟓|1]} +\\
+\scriptscriptstyle\frac{5/2⟨12⟩⟨23⟩[13][24]+5/4⟨13⟩⟨23⟩[13][34]+5/4⟨12⟩⟨24⟩[14][24]+5/4⟨13⟩⟨24⟩[14][34]}{⟨13⟩⟨34⟩⟨1|𝟓|1]} +\\
+\scriptscriptstyle\frac{5/4⟨12⟩[13]⟨23⟩²[23]}{⟨13⟩⟨24⟩⟨34⟩⟨1|𝟓|1]} +\\
+\scriptscriptstyle\frac{⟨23⟩[34](-3/4⟨13⟩[13]-5/4⟨24⟩[24])}{⟨13⟩⟨34⟩⟨3|2+4|3]} \phantom{+}
+\end{gathered}$
+\end{my}
+\end{document}

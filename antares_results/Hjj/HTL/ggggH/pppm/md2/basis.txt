@@ -1,0 +1,10 @@
+['coeff_0',
+ ('3214𝟓', False),
+ 'coeff_1',
+ ('3214𝟓', False, '+'),
+ 'coeff_2',
+ ('3214𝟓', False, '+'),
+ 'coeff_3',
+ ('3214𝟓', False),
+ 'coeff_4',
+ ('3214𝟓', False)]
