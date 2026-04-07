@@ -11,6 +11,8 @@ Phase space point of arXiv:2503.10595 written in terms of four momenta.
 import mpmath
 import numpy
 
+from syngular import Field
+from pyadic.primes import primes
 from lips import Particles
 
 
@@ -38,3 +40,7 @@ assert numpy.all(abs(numpy.array(oPs.m2s)) < oPs.field.tollerance)
 
 oPs5pt = oPs.cluster([[1, ], [2, ], [3, ], [4, ], [5, 6]])
 oPs5pt[5]._r_sp_d = oPs5pt[5]._l_sp_d = oPs5pt[5]._r_sp_u = oPs5pt[5]._l_sp_u = None
+
+oPsFFCheck = Particles(6, field=Field("finite field", primes[-1], 1), seed=0)
+oPsFFCheck5pt = oPsFFCheck.cluster([[1, ], [2, ], [3, ], [4, ], [5, 6]])
+oPsFFCheck5pt[5]._r_sp_d = oPsFFCheck5pt[5]._l_sp_d = oPsFFCheck5pt[5]._r_sp_u = oPsFFCheck5pt[5]._l_sp_u = None
