@@ -1,15 +1,16 @@
 import numpy
 import pytest
+import re
 from multiset import Multiset
 from importlib import import_module
 
 from pathlib import Path
 
-from pentagon_functions import evaluate_pentagon_functions, PentagonMonomial
-from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
+from pentagon_functions import PentagonMonomial
 
-from .momenta import oPs, oPs5pt, oPsFFCheck5pt
+from .momenta import oPs, oPsFFCheck5pt
 from .target_values import target_values
+from .remainders import remainder
 
 
 this_script_path = Path(__file__).resolve().parent
@@ -20,95 +21,33 @@ test_cases = [
     for partial in entries
 ]
 
+LOOP_PATTERN = re.compile(r"_(\d)L_")
+
 
 @pytest.mark.parametrize("channel, partial", test_cases)
 def test_Hjj_HTL_helicity_remainder(channel, partial):
     """Test the numerical evaluation of the Hjj HTL remainders against cached values, run with pytest."""
     target = target_values[channel][partial]
-    helicity = partial.split("_")[0]
-
-    representative_helicity = helicity
-    if channel == 'ggggH' and helicity == 'pmpm':
-        representative_helicity = 'ppmm'
-    elif channel == 'uubggH' and helicity == 'pmmp':
-        representative_helicity = 'pmpm'
-    elif channel == 'uubddbH' and helicity == 'pmmp':
-        representative_helicity = 'pmpm'
-
-    module = import_module(f".HTL.{channel}.{representative_helicity}", package=__package__)
-    lTerms = module.lTerms
-
-    with open(this_script_path / "HTL" / channel / "basis_transcendental.txt", "r") as f:
-        basis_transcendental = f.readlines()
-    basis_transcendental = [PentagonMonomial(entry.replace("\n", "")) for entry in basis_transcendental]
-
-    pentagon_functions = basis_transcendental
-    pentagon_monomials = list(set([pentagon for pentagon_monomial in pentagon_functions
-                                   for pentagon in pentagon_monomial.distinct_elements()]))
-
-    evaluated_pentagon_monomials = evaluate_pentagon_functions(
-        pentagon_monomials, oPs.image(("654321", False)),
-        pentagon_function_set='m1', precision="d", number_of_cores=4)
-
-    pentagon_basis = basis_transcendental
-    numerical_pentagon_basis = [entry.subs(evaluated_pentagon_monomials) for entry in pentagon_basis]
-
-    rref = matrix_from_plain_txt_coo(this_script_path / "HTL" / channel / representative_helicity / f"matrix_{partial}")
-
-    permutation = ('12345', False)
-    if channel == 'ggggH' and helicity == 'pmpm':
-        permutation = ('13245', False)
-    elif channel == 'uubggH' and helicity == 'pmmp':
-        permutation = ('12435', False)
-    elif channel == 'uubddbH' and helicity == 'pmmp':
-        permutation = ('12435', False)
-
-    oPs5ptPerm = oPs5pt.image(permutation)
-    num_eval = lTerms(oPs5ptPerm) @ rref @ numpy.array(numerical_pentagon_basis)
-    assert numpy.isclose(target, complex(num_eval)), f"Failed, target: {target}, got: {complex(num_eval)}."
+    match = LOOP_PATTERN.search(partial)
+    loops = int(match.group(1))
+    num_eval = remainder(channel, partial, oPs)
+    assert numpy.isclose(target / 2 ** loops, complex(num_eval)), f"Failed, target: {target}, got: {complex(num_eval)}."
 
 
 @pytest.mark.parametrize("channel, partial", test_cases)
 def test_Hjj_HTL_FF_semi_numerical(channel, partial):
     """Test the numerical evaluation of the Hjj HTL remainders against cached values, run with pytest."""
-    helicity = partial.split("_")[0]
-
-    representative_helicity = helicity
-    if channel == 'ggggH' and helicity == 'pmpm':
-        representative_helicity = 'ppmm'
-    elif channel == 'uubggH' and helicity == 'pmmp':
-        representative_helicity = 'pmpm'
-    elif channel == 'uubddbH' and helicity == 'pmmp':
-        representative_helicity = 'pmpm'
-
-    module = import_module(f".HTL.{channel}.{representative_helicity}", package=__package__)
-    lTerms = module.lTerms
-
-    with open(this_script_path / "HTL" / channel / "basis_transcendental.txt", "r") as f:
-        basis_transcendental = f.readlines()
-    basis_transcendental = [PentagonMonomial(entry.replace("\n", "")) for entry in basis_transcendental]
-    # targets here are directly from Caravel - pentagon keys do not have roots in them
-    basis_transcendental = [
-        PentagonMonomial(dict([(key, val) for key, val in Multiset(entry).items() if 'over' not in key and 'str' not in key]))
-        for entry in basis_transcendental
-    ]
-
-    rref = matrix_from_plain_txt_coo(this_script_path / "HTL" / channel / representative_helicity / f"matrix_{partial}")
-
-    permutation = ('12345', False)
-    if channel == 'ggggH' and helicity == 'pmpm':
-        permutation = ('13245', False)
-    elif channel == 'uubggH' and helicity == 'pmmp':
-        permutation = ('12435', False)
-    elif channel == 'uubddbH' and helicity == 'pmmp':
-        permutation = ('12435', False)
-
-    oPsFFCheck5ptPerm = oPsFFCheck5pt.image(permutation)
+    match = LOOP_PATTERN.search(partial)
+    loops = int(match.group(1))
 
     module = import_module(f".FF_targets.HTL.{channel}.{partial}", package=__package__)
     doriginal = module.target_values
-    result_reloaded = [(a, b) for a, b in zip(lTerms(oPsFFCheck5ptPerm) @ rref, basis_transcendental) if a != 0]
-    dreloaded = dict([(b, a) for a, b in result_reloaded])
+    dreloaded = remainder(channel, partial, oPsFFCheck5pt, semi_numerical=True, as_dict=True)
+    # remove roots: targets were generated from Caravel while the roots were re-added afterwards
+    dreloaded = {
+        PentagonMonomial(dict([(key, val) for key, val in Multiset(pent).items() if 'over' not in key and 'str' not in key])): val
+        for pent, val in dreloaded.items()
+    }
 
     assert doriginal.keys() == dreloaded.keys(), f"Keys do not match, original: {doriginal.keys()}, reloaded: {dreloaded.keys()}"
-    assert all([doriginal[key] == dreloaded[key] for key in doriginal.keys()]), f"Values do not match, original: {doriginal.values()}, reloaded: {dreloaded.values()}"
+    assert all([doriginal[key] == dreloaded[key] * 2 ** loops for key in doriginal.keys()]), f"Values do not match, original: {doriginal.values()}, reloaded: {dreloaded.values()}"
