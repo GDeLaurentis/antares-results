@@ -9,6 +9,35 @@ this_script_path = Path(__file__).resolve().parent
 
 
 def remainder(channel, partial, phase_space_point, semi_numerical=False, as_dict=False, mu2=1):
+    """
+    Evaluate the finite remainder for a given channel, helicity configuration, and phase-space point.
+
+    The remainder is reconstructed as a linear combination of transcendental basis functions,
+    using precomputed rational matrices and helicity-dependent rational prefactors.
+
+    Parameters
+    ----------
+    channel : str
+        Scattering channel ('ggggH', 'uubggH', 'uubddbH').
+    partial : str
+        Identifier of the partial amplitude ('helicity_#L_#Nc_#Nf').
+    phase_space_point : lips.Particles object
+        Phase-space point with spinor-helicity data.
+    semi_numerical : bool, optional
+        If True, return numerical coefficients multiplying pentagon monomials, which are
+        kept symbolic. Automatically enabled for finite-field and p-adic phase-space points.
+    as_dict : bool, optional
+        If True and semi_numerical=True, return a dictionary {pentagon monomial: coefficient}.
+    mu2 : float, optional
+        Renormalisation scale entering the evaluation of pentagon functions.
+
+    Returns
+    -------
+    float or list of (number, PentagonMonomial) or dict
+        - Numerical value of the remainder if semi_numerical=False.
+        - List of (coefficient, pentagon monomial) pairs if semi_numerical=True.
+        - Dictionary mapping pentagon monomials to coefficients if as_dict=True.
+    """
     oPs = phase_space_point
     helicity = partial.split("_")[0]
 

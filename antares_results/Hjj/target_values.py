@@ -12,6 +12,7 @@ Import with
 target_values = {
 
     # '{ggggH|uubggH|uubddbH}' / ('{helicity}_{l}L_Nc{nc}_Nf{nf}): target value - not normalized by tree
+    # these were generated with an Nc/2 expansion, hence the factor of 2^loops applied to in the tests
 
     'ggggH': {
         # all plus
