@@ -8,7 +8,7 @@ from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
 this_script_path = Path(__file__).resolve().parent
 
 
-def remainder(channel, partial, phase_space_point, semi_numerical=False, as_dict=False, mu2=1):
+def remainder(channel, partial, phase_space_point, semi_numerical=False, as_dict=False, mu2=1, precision='d'):
     """
     Evaluate the finite remainder for a given channel, helicity configuration, and phase-space point.
 
@@ -20,7 +20,7 @@ def remainder(channel, partial, phase_space_point, semi_numerical=False, as_dict
     channel : str
         Scattering channel ('ggggH', 'uubggH', 'uubddbH').
     partial : str
-        Identifier of the partial amplitude ('helicity_#L_#Nc_#Nf').
+        Identifier of the partial amplitude ('helicity_#L_Nc#_Nf#').
     phase_space_point : lips.Particles object
         Phase-space point with spinor-helicity data.
     semi_numerical : bool, optional
@@ -71,7 +71,7 @@ def remainder(channel, partial, phase_space_point, semi_numerical=False, as_dict
 
         evaluated_pentagon_monomials = evaluate_pentagon_functions(
             pentagon_monomials, oPs.image(("654321", False)), mu2=mu2,
-            pentagon_function_set='m1', precision="d", number_of_cores=4)
+            pentagon_function_set='m1', precision=precision, number_of_cores=4)
 
         pentagon_basis = basis_transcendental
         numerical_pentagon_basis = [entry.subs(evaluated_pentagon_monomials) for entry in pentagon_basis]
