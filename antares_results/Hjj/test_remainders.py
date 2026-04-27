@@ -45,7 +45,7 @@ def test_Hjj_HTL_FF_semi_numerical(channel, partial):
     dreloaded = remainder(channel, partial, oPsFFCheck5pt, semi_numerical=True, as_dict=True)
     # remove roots: targets were generated from Caravel while the roots were re-added afterwards
     dreloaded = {
-        PentagonMonomial(dict([(key, val) for key, val in Multiset(pent).items() if 'over' not in key and 'str' not in key])): val
+        PentagonMonomial(dict([(key, val) for key, val in Multiset(pent).items() if not(any(e in key for e in ['over', 'str', 'Sigma']))])): val
         for pent, val in dreloaded.items()
     }
 

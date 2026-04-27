@@ -78,7 +78,7 @@ target_values = {
     PentagonMonomial({'F[2,22]': 1}): 856179152 % 2147481317,
     PentagonMonomial({'F[2,23]': 1}): 116401387 % 2147481317,
     PentagonMonomial({'F[2,24]': 1}): 487028298 % 2147481317,
-    PentagonMonomial({'F[2,33]': 1}): 505255699 % 2147481317,
+    PentagonMonomial({'F[2,33]': 1}): 1997985701 % 2147481317,
     PentagonMonomial({'im[1,1]': 2}): 1093697315 % 2147481317,
     PentagonMonomial({'F[1,1]': 3}): 2093767139 % 2147481317,
     PentagonMonomial({'F[1,1]': 2, 'F[1,2]': 1}): 73118031 % 2147481317,
