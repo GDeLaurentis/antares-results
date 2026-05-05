@@ -1,0 +1,5 @@
+coeff_2
+==================
+
+.. image:: /_static/antares_results/Hjj/HTL/uubggH/pmpp/md_0/coeff_2.png
+   :width: 100%

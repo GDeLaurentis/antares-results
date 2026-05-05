@@ -1,0 +1,5 @@
+coeff_15
+==================
+
+.. image:: /_static/antares_results/Hjj/HTL/ggggH/pppm/md_0/coeff_15.png
+   :width: 100%

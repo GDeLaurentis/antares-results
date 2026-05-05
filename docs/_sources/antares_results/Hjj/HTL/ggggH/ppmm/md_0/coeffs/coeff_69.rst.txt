@@ -1,0 +1,5 @@
+coeff_69
+==================
+
+.. image:: /_static/antares_results/Hjj/HTL/ggggH/ppmm/md_0/coeff_69.png
+   :width: 100%
