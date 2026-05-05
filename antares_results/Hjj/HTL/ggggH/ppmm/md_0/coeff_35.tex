@@ -1,0 +1,19 @@
+\documentclass[varwidth, border=5pt]{standalone}
+\usepackage[paperwidth=575cm, paperheight=575cm, margin=1in, landscape]{geometry}
+\DeclareMathSizes{1}{1}{1}{0.1}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\trfive}{\text{tr5}}
+\standaloneenv{my}
+
+\begin{document}
+\begin{my}
+$\begin{gathered}
+\scriptscriptstyle\frac{3⟨14⟩²[14]²⟨34⟩}{⟨12⟩⟨13⟩⟨24⟩[34]²} +\\
+\scriptscriptstyle\frac{3⟨14⟩²[14]²}{⟨12⟩²[34]²} +\\
+\scriptscriptstyle\frac{2⟨14⟩³[14]³}{⟨12⟩⟨13⟩⟨24⟩[34]³} +\\
+\scriptscriptstyle\frac{6⟨13⟩⟨14⟩[14]⟨24⟩}{⟨12⟩³[34]} \phantom{+}
+\end{gathered}$
+\end{my}
+\end{document}

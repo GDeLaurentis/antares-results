@@ -1,0 +1,21 @@
+\documentclass[varwidth, border=5pt]{standalone}
+\usepackage[paperwidth=575cm, paperheight=575cm, margin=1in, landscape]{geometry}
+\DeclareMathSizes{1}{1}{1}{0.1}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\trfive}{\text{tr5}}
+\standaloneenv{my}
+
+\begin{document}
+\begin{my}
+$\begin{gathered}
+\scriptscriptstyle\frac{[13][23]²⟨34⟩(4⟨13⟩⟨24⟩[12]-3⟨12⟩⟨34⟩[12]-1⟨14⟩⟨34⟩[14])}{⟨13⟩⟨3|1+4|3]³} +\\
+\scriptscriptstyle\frac{⟨12⟩[23]²⟨34⟩³(2[13][24]-1[12][34])}{⟨13⟩²⟨3|1+4|3]³} +\\
+\scriptscriptstyle\frac{1⟨12⟩⟨23⟩[23]³[24]⟨34⟩³}{⟨13⟩³⟨3|1+4|3]³} +\\
+\scriptscriptstyle\frac{[13]⟨23⟩[23]²⟨34⟩(6⟨13⟩⟨14⟩[12][13]-3⟨13⟩⟨24⟩[12][23]+6⟨14⟩⟨34⟩[13][24])}{⟨13⟩⟨3|1+4|3]⁴} +\\
+\scriptscriptstyle\frac{-3⟨12⟩[13]⟨23⟩[23]³[24]⟨34⟩³}{⟨13⟩²⟨3|1+4|3]⁴} +\\
+\scriptscriptstyle\frac{6[13]²⟨14⟩⟨23⟩²[23]³⟨34⟩⟨3|1+4|2]}{⟨13⟩⟨3|1+4|3]⁵} \phantom{+}
+\end{gathered}$
+\end{my}
+\end{document}

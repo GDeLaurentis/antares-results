@@ -1,0 +1,18 @@
+\documentclass[varwidth, border=5pt]{standalone}
+\usepackage[paperwidth=575cm, paperheight=575cm, margin=1in, landscape]{geometry}
+\DeclareMathSizes{1}{1}{1}{0.1}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\trfive}{\text{tr5}}
+\standaloneenv{my}
+
+\begin{document}
+\begin{my}
+$\begin{gathered}
+\scriptscriptstyle\frac{1[12]⟨1|2+3|1]²}{⟨12⟩⟨13⟩²[14]²} +\\
+\scriptscriptstyle\frac{[12][13]⟨23⟩[24](2⟨12⟩[12]+1⟨13⟩[13])}{⟨12⟩⟨13⟩²[14]³} +\\
+\scriptscriptstyle\frac{1⟨12⟩[12]³⟨23⟩[24]}{⟨13⟩³[14]³} \phantom{+}
+\end{gathered}$
+\end{my}
+\end{document}

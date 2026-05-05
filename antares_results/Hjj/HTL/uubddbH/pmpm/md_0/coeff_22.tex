@@ -1,0 +1,18 @@
+\documentclass[varwidth, border=5pt]{standalone}
+\usepackage[paperwidth=575cm, paperheight=575cm, margin=1in, landscape]{geometry}
+\DeclareMathSizes{1}{1}{1}{0.1}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\trfive}{\text{tr5}}
+\standaloneenv{my}
+
+\begin{document}
+\begin{my}
+$\begin{gathered}
+\scriptscriptstyle\frac{-1⟨24⟩[13]⟨3|𝟓|3]}{⟨3|1+2|3]²} +\\
+\scriptscriptstyle\frac{1[13]⟨34⟩⟨2|1+4|3]⟨3|𝟓|3]}{⟨3|1+2|3]³} +\\
+\scriptscriptstyle\frac{3[13]⟨23⟩⟨34⟩[34]⟨3|𝟓|3]⟨4|1+2|3]}{⟨3|1+2|3]⁴} \phantom{+}
+\end{gathered}$
+\end{my}
+\end{document}
