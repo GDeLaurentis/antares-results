@@ -1,6 +1,7 @@
 import numpy
 from importlib import import_module
 from pathlib import Path
+from fractions import Fraction
 
 from pentagon_functions import evaluate_pentagon_functions, PentagonMonomial
 # from linac.sparse_matrix_tools import matrix_from_plain_txt_coo
