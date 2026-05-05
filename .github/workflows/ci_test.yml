@@ -48,7 +48,7 @@ jobs:
     - name: Checkout this Repo
       uses: actions/checkout@v4
       with:
-        path: antares-results
+        path: deps/antares-results
 
     # Cache the installed prefix (/home/runner/local) so build_ext can skip
     - name: Cache PentagonFunctions install prefix
@@ -83,7 +83,7 @@ jobs:
     - name: Test with pytest
       run: |
         export LD_LIBRARY_PATH="/home/runner/local/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH}"
-        cd antares-results
+        cd deps/antares-results
         pytest --verbose -s |& tee coverage.txt
         PYTEST_EXIT_CODE=${PIPESTATUS[0]}
         if [ "$PYTEST_EXIT_CODE" -ne 0 ]; then

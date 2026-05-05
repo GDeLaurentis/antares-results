@@ -17,6 +17,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 
 
+## [0.2.0] - 2026-05-05 - Hjj LC HTL update
+
+### Added
+
+- $pp \to Hjj$ two-loop finite remainders in the heavy-top limit at leading color <br>
+  `from antares_results.Hjj.remainders import remainder`
+
+
 ## [0.1.3] - 2026-03-06
 
 ### Fixed
@@ -92,7 +100,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - jjj remainders up to two loops
 
 
-[unreleased]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.3...HEAD
+[unreleased]: https://github.com/GDeLaurentis/antares-results/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.3...v0.2.0
 [0.1.3]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/GDeLaurentis/antares-results/compare/v0.1.0...v0.1.1
